@@ -1,0 +1,37 @@
+FROM php:8.1-fpm-alpine
+
+# Install necessary packages
+RUN apk add --no-cache nginx wget
+
+# Install PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+# Setup nginx
+RUN mkdir -p /run/nginx
+COPY docker/nginx.conf /etc/nginx/nginx.conf
+
+# Create app directory
+RUN mkdir -p /app
+COPY . /app
+
+# Install composer
+RUN sh -c "wget http://getcomposer.org/composer.phar && chmod a+x composer.phar && mv composer.phar /usr/local/bin/composer"
+
+# Install dependencies and create storage link
+RUN cd /app && \
+    /usr/local/bin/composer install --no-dev && \
+    mkdir -p /app/storage/app/public && \
+    mkdir -p /app/storage/framework/{cache,sessions,views} && \
+    mkdir -p /app/storage/logs && \
+    php artisan storage:link
+
+# Set proper permissions
+RUN chown -R www-data: /app && \
+    chmod -R 775 /app/storage && \
+    chmod -R 775 /app/bootstrap/cache
+
+# Create startup script
+COPY docker/startup.sh /app/docker/startup.sh
+RUN chmod +x /app/docker/startup.sh
+
+CMD sh /app/docker/startup.sh
