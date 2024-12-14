@@ -55,7 +55,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  * route "/logout"
  * @method "POST"
  */
+
 Route::post('/logout', LogoutController::class)->name('logout');
+
+// Oauth
 
 Route::get('/auth/redirect/google', [AuthController::class, 'redirectToGoogle']);
 Route::get('/auth/callback/google', [AuthController::class, 'handleGoogleCallback']);
