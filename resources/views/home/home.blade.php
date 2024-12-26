@@ -134,10 +134,13 @@ footer {
         <section class="endpoint">
             <h2>POST /api/login</h2>
             <p><strong>Description:</strong> Login into application</p>
-            {
+            <p><strong>Request Body:</strong></p>
+            <pre>
+{
     "email": "newuser@example.com",
-    "password": "bigboy123",
+    "password": "12324354264"
 }
+            </pre>
             <p><strong>Response:</strong></p>
             <pre>
 {
