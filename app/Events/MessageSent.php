@@ -14,15 +14,15 @@ class MessageSent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-
+    public $chat;
 
     /**
      * Create a new event instance.
      */
-    public function __construct(public string $username, public string $messages)
+    public function __construct($chat)
     {
+        $this->chat = $chat;
     }
-
     /**
      * Get the channels the event should broadcast on.
      *

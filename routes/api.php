@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\LoginController as ApiLoginController;
 use App\Http\Controllers\Api\LogoutController;
 use App\Http\Controllers\Api\RegisterController;
+use App\Http\Controllers\auth\authController as AuthAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\user\LoginController;
@@ -29,34 +30,49 @@ use Illuminate\Support\Facades\Route;
  * @method "POST"
  */
 
-Route::post('/messages', [ChatController::class, 'message']);
+    Route::middleware('auth:sanctum')->group(function() {
+        Route::post('/chat', [ChatController::class, 'sendMessage']);
+        Route::get('/chat', [ChatController::class, 'getMessages']);
+    });
+
+
+
+    Route::post('/register', [AuthAuthController::class, 'register']);
+    Route::post('/login', [AuthAuthController::class, 'login']);
+    Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
+
+    Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
 
 /**
- * route "/register"
- * @method "POST"
- */
-Route::post('/register', RegisterController::class)->name('register');
+//  * route "/register"
+//  * @method "POST"
+//  */
+// Route::post('/register', RegisterController::class)->name('register');
 
-/**
- * route "/login"
- * @method "POST"
- */
-Route::post('/login', ApiLoginController::class)->name('login');
+// /**
+//  * @method "POST"
+//  */
+// Route::post('/login', ApiLoginController::class)->name('login');
 
 /**
  * route "/user"
  * @method "GET"
  */
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
 
 /**
  * route "/logout"
  * @method "POST"
  */
 
-Route::post('/logout', LogoutController::class)->name('logout');
+// Route::post('/logout', LogoutController::class)->name('logout');
 
 // Oauth
 
