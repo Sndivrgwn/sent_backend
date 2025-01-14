@@ -3,7 +3,7 @@
 use App\Http\Controllers\Api\LoginController as ApiLoginController;
 use App\Http\Controllers\Api\LogoutController;
 use App\Http\Controllers\Api\RegisterController;
-use App\Http\Controllers\Auth\AuthController as AuthAuthController;
+use App\Http\Controllers\Auth\authController as AuthAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\user\LoginController;
