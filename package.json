@@ -2,6 +2,8 @@
   "dependencies": {
     "echo": "^0.1.9",
     "laravel": "^0.0.1",
-    "socket.io": "^4.8.1"
-  }
+    "socket.io": "^4.8.1",
+  },
+  
+  "proxy": "http://api-chat.itclub5.my.id"
 }
