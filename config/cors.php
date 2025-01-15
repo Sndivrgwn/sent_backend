@@ -20,8 +20,8 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        env('FRONTEND_URL', 'http://localhost:3000'),
-        'http://localhost:*',  // Allow any port on localhost
+        env('FRONTEND_URL', 'http://9.9.9.101'),
+        'http://9.9.9.101',  // Allow requests from the frontend IP
     ],
 
 
