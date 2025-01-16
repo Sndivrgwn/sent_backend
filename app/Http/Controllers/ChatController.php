@@ -76,4 +76,33 @@ class ChatController extends Controller
          // Mengembalikan data sebagai JSON
          return response()->json($groupedMessages);
     }
+    
+    public function getContactInfo()
+{
+    // Mengambil semua data pengguna
+    $users = User::all();
+
+    // Cek apakah ada pengguna
+    if ($users->isEmpty()) {
+        return response()->json(['error' => 'No users found'], 404);
+    }
+
+    // Memetakan setiap pengguna untuk mengambil informasi kontak mereka
+    $contactInfo = $users->map(function ($user) {
+        return [
+            'user_id' => $user->id,
+            'name' => $user->name,
+            'divisi' => $user->divisi,
+            'kelas' => $user->kelas,
+            'avatar' => $user->avatar, // Misalnya jika ada kolom avatar
+            'status' => $user->status, // Misalnya jika ada kolom status
+            'last_online' => Carbon::parse($user->last_online)->diffForHumans(), // Menghitung waktu terakhir online
+        ];
+    });
+
+    // Mengembalikan data sebagai JSON
+    return response()->json($contactInfo);
+}
+
+
 }
