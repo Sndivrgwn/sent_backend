@@ -44,42 +44,38 @@ class ChatController extends Controller
     return response()->json($messages);
 }
 
-public function getAllMessage()
-{
-    // Mengambil semua pesan dari tabel messages
-    $messages = ChatMessage::all();
+    public function getAllMessage() {
+         // Mengambil semua pesan dari tabel messages
+         $messages = ChatMessage::all();
 
-    // Mengelompokkan pesan berdasarkan receiver_id
-    $groupedMessages = $messages->groupBy('receiver_id')->map(function ($group, $receiverId) {
-        // Mengambil nama penerima (receiver) berdasarkan receiver_id
-        $receiver = User::find($receiverId);
-        $receiverName = $receiver ? $receiver->name : 'Unknown'; // Nama receiver
-
-        return [
-            $receiverName => $group->map(function ($message) {
-                // Mengambil nama pengirim (sender) berdasarkan sender_id
-                $sender = User::find($message->sender_id);
-                $senderName = $sender ? ($sender->id === auth()->id() ? 'Anda' : $sender->name) : 'Unknown'; // Nama sender
-
-                return [
-                    'sender' => $senderName,
-                    'message' => $message->message_text,
-                    'time' => Carbon::parse($message->created_at)->format('H:i'),
-                ];
-            })->values()
-        ];
-    });
-
-    // Memformat hasil sebagai array
-    $formattedMessages = [];
-    foreach ($groupedMessages as $group) {
-        $formattedMessages = array_merge($formattedMessages, $group);
+         // Mengelompokkan pesan berdasarkan sender_id dan mengambil nama sender serta receiver
+         $groupedMessages = $messages->groupBy('sender_id')->map(function ($group, $senderId) {
+             // Mengambil nama pengirim (sender) berdasarkan sender_id
+             $sender = User::find($senderId); // Mengambil data user berdasarkan sender_id
+             $senderName = $sender ? $sender->name : 'Unknown'; // Nama sender
+     
+             return [
+                 'sender_id' => $senderId,
+                 'sender_name' => $senderName,
+                 'messages' => $group->map(function ($message) {
+                     // Mengambil nama penerima (receiver) berdasarkan receiver_id
+                     $receiver = User::find($message->receiver_id); // Mengambil data user berdasarkan receiver_id
+                     $receiverName = $receiver ? $receiver->name : 'Unknown'; // Nama receiver
+     
+                     return [
+                         'receiver_id' => $receiver->id,
+                         'receiver_name' => $receiverName,
+                         'message_text' => $message->message_text,
+                         'time' => Carbon::parse($message->created_at)->format('H:i'),
+                         'day' => Carbon::parse($message->created_at)->format('D')
+                     ];
+                 })->values()
+             ];
+         })->values();
+     
+         // Mengembalikan data sebagai JSON
+         return response()->json($groupedMessages);
     }
-
-    // Mengembalikan data sebagai JSON
-    return response()->json($formattedMessages);
-}
-
     
     public function getContactInfo()
 {
