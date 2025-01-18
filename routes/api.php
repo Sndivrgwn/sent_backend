@@ -35,15 +35,15 @@ use Illuminate\Support\Facades\Route;
         Route::get('/chat', [ChatController::class, 'getAllMessage']);
     });
     
-    Route::get('/contact', [ChatController::class, 'getContactInfo']);
-
-
+    
+    
     Route::post('/register', [AuthAuthController::class, 'register']);
     Route::post('/login', [AuthAuthController::class, 'login']);
     Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
-
+    
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
-
+    
+    Route::get('/contact', [ChatController::class, 'getContactInfo']);
 /**
 //  * route "/register"
 //  * @method "POST"
