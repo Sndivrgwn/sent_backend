@@ -35,6 +35,7 @@ class ChatController extends Controller
 
         return response()->json([
             'status' => 'Message Sent!',
+            'sender_name' => Auth::user()->name,
             'message' => $chat,
         ], 201);
     }
@@ -58,14 +59,17 @@ class ChatController extends Controller
 
         // Format respons
         return response()->json($messages->map(function ($message) {
+            $jakartaTimezone = 'Asia/Jakarta';
+            $createdAtInJakarta = $message->created_at->setTimezone($jakartaTimezone);
+    
             return [
                 'sender_id' => $message->sender->id,
                 'sender_name' => $message->sender->name,
                 'receiver_id' => $message->receiver->id,
                 'receiver_name' => $message->receiver->name,
                 'message_text' => $message->message_text,
-                'time' => $message->created_at->format('H:i'),
-                'date' => $message->created_at->format('Y-m-d, D'),
+                'time' => $createdAtInJakarta->format('H:i'),
+                'date' => $createdAtInJakarta->format('Y-m-d, D'),
                 'is_read' => $message->is_read,
             ];
         }));
