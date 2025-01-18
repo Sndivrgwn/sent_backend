@@ -33,9 +33,9 @@ use Illuminate\Support\Facades\Route;
     Route::middleware('auth:sanctum')->group(function() {
         Route::post('/chat', [ChatController::class, 'sendMessage']);
         Route::get('/chat', [ChatController::class, 'getAllMessage']);
-        Route::get('/contact', [ChatController::class, 'getContactInfo']);
     });
-
+    
+    Route::get('/contact', [ChatController::class, 'getContactInfo']);
 
 
     Route::post('/register', [AuthAuthController::class, 'register']);
