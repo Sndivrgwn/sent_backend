@@ -32,8 +32,8 @@ use Illuminate\Support\Facades\Route;
 
     Route::middleware('auth:sanctum')->group(function() {
         Route::post('/chat', [ChatController::class, 'sendMessage']);
-        Route::get('/chat', [ChatController::class, 'getAllMessage']);
         Route::get('/chat/{userId}', [ChatController::class, 'getMessages']);
+        Route::get('/contact', [ChatController::class, 'getChatContacts']);
     });
     
     
@@ -44,7 +44,6 @@ use Illuminate\Support\Facades\Route;
     
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
     
-    Route::get('/contact', [ChatController::class, 'getChatContacts']);
 /**
 //  * route "/register"
 //  * @method "POST"
