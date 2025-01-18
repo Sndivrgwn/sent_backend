@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Events\MessageSent;
 use App\Models\ChatMessage;
-use App\Models\message;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,114 +11,90 @@ use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
+    // Mengirim pesan private
     public function sendMessage(Request $request)
-    { 
+    {
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        // Create a new message with sender and receiver IDs
-        $chat = ChatMessage::create([
-            'sender_id' => Auth::id(), // ID of the authenticated user
-            'receiver_id' => $request->receiver_id, // ID of the message recipient
-            'message_text' => $request->message_text,
+        $validatedData = $request->validate([
+            'receiver_id' => 'required|exists:users,id', // Pastikan penerima ada di database
+            'message_text' => 'required|string|max:1000', // Validasi isi pesan
         ]);
-    
-        // Broadcast event
+
+        // Buat pesan baru
+        $chat = ChatMessage::create([
+            'sender_id' => Auth::id(),
+            'receiver_id' => $validatedData['receiver_id'],
+            'message_text' => $validatedData['message_text'],
+        ]);
+
+        // Broadcast event untuk real-time
         event(new MessageSent($chat));
-    
-        return response()->json(['status' => 'Message Sent!', 'message' => $chat], 201);
+
+        return response()->json([
+            'status' => 'Message Sent!',
+            'message' => $chat,
+        ], 201);
     }
 
+    // Mengambil riwayat pesan antara sender dan receiver (private chat)
     public function getMessages($receiverId)
-{
-    // Ambil semua pesan dengan relasi sender dan receiver berdasarkan receiver_id
-    $messages = ChatMessage::where('receiver_id', $receiverId)
-        ->with(['sender', 'receiver']) // Eager loading untuk relasi
-        ->get();
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
 
-    // Kelompokkan pesan berdasarkan sender_id
-    $groupedMessages = $messages->groupBy('sender_id')->map(function ($group, $senderId) {
-        // Ambil nama sender dari relasi
-        $senderName = $group->first()->sender->name ?? 'Unknown';
+        $messages = ChatMessage::where(function ($query) use ($receiverId) {
+            $query->where('sender_id', Auth::id())
+                  ->where('receiver_id', $receiverId);
+        })->orWhere(function ($query) use ($receiverId) {
+            $query->where('sender_id', $receiverId)
+                  ->where('receiver_id', Auth::id());
+        })->with(['sender', 'receiver'])
+          ->orderBy('created_at', 'asc')
+          ->get();
 
-        return [
-            'sender_id' => $senderId,
-            'sender_name' => $senderName,
-            'messages' => $group->map(function ($message) {
-                return [
-                    'receiver_id' => $message->receiver->id ?? null,
-                    'receiver_name' => $message->receiver->name ?? 'Unknown',
-                    'message_text' => $message->message_text,
-                    'time' => $message->created_at->format('H:i'),
-                    'day' => $message->created_at->format('D'),
-                ];
-            })->values()
-        ];
-    })->values();
-
-    // Mengembalikan data sebagai JSON
-    return response()->json($groupedMessages);
-}
-
-
-    public function getAllMessage()
-{
-    // Ambil semua pesan dengan relasi sender dan receiver menggunakan eager loading
-    $messages = ChatMessage::with(['sender', 'receiver'])->get();
-
-    // Kelompokkan pesan berdasarkan sender_id
-    $groupedMessages = $messages->groupBy('sender_id')->map(function ($group, $senderId) {
-        // Ambil nama sender dari relasi
-        $senderName = $group->first()->sender->name ?? 'Unknown';
-
-        return [
-            'sender_id' => $senderId,
-            'sender_name' => $senderName,
-            'messages' => $group->map(function ($message) {
-                return [
-                    'receiver_id' => $message->receiver->id ?? null,
-                    'receiver_name' => $message->receiver->name ?? 'Unknown',
-                    'message_text' => $message->message_text,
-                    'time' => $message->created_at->format('H:i'),
-                    'day' => $message->created_at->format('D'),
-                ];
-            })->values()
-        ];
-    })->values();
-
-    // Mengembalikan data sebagai JSON
-    return response()->json($groupedMessages);
-}
-
-    
-    public function getContactInfo()
-{
-    // Mengambil semua data pengguna
-    $users = User::all();
-
-    // Cek apakah ada pengguna
-    if ($users->isEmpty()) {
-        return response()->json(['error' => 'No users found'], 404);
+        // Format respons
+        return response()->json($messages->map(function ($message) {
+            return [
+                'sender_id' => $message->sender->id,
+                'sender_name' => $message->sender->name,
+                'receiver_id' => $message->receiver->id,
+                'receiver_name' => $message->receiver->name,
+                'message_text' => $message->message_text,
+                'time' => $message->created_at->format('H:i'),
+                'date' => $message->created_at->format('Y-m-d'),
+                'is_read' => $message->is_read,
+            ];
+        }));
     }
 
-    // Memetakan setiap pengguna untuk mengambil informasi kontak mereka
-    $contactInfo = $users->map(function ($user) {
-        return [
-            'user_id' => $user->id,
-            'name' => $user->name,
-            'email' => $user->email,
-            'divisi' => $user->divisi,
-            'kelas' => $user->kelas,
-            'avatar' => $user->avatar, // Misalnya jika ada kolom avatar
-            'status' => $user->status, // Misalnya jika ada kolom status
-            'last_online' => Carbon::parse($user->last_online)->diffForHumans(), // Menghitung waktu terakhir online
-        ];
-    });
+    // Mengambil daftar kontak dengan siapa pengguna pernah mengirim atau menerima pesan
+    public function getChatContacts()
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
 
-    // Mengembalikan data sebagai JSON
-    return response()->json($contactInfo);
-}
+        // Ambil semua kontak yang pernah berinteraksi dengan pengguna
+        $contacts = ChatMessage::where('sender_id', Auth::id())
+            ->orWhere('receiver_id', Auth::id())
+            ->with(['sender', 'receiver'])
+            ->get()
+            ->map(function ($message) {
+                $contact = $message->sender_id === Auth::id() ? $message->receiver : $message->sender;
 
+                return [
+                    'user_id' => $contact->id,
+                    'name' => $contact->name,
+                    'email' => $contact->email,
+                    'last_message' => $message->message_text,
+                    'last_online' => Carbon::parse($contact->last_online)->diffForHumans(),
+                ];
+            })->unique('user_id')->values();
 
+        return response()->json($contacts);
+    }
 }

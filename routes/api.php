@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Route;
     
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
     
-    Route::get('/contact', [ChatController::class, 'getContactInfo']);
+    Route::get('/contact', [ChatController::class, 'getChatContacts']);
 /**
 //  * route "/register"
 //  * @method "POST"
