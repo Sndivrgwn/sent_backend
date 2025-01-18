@@ -65,7 +65,7 @@ class ChatController extends Controller
                 'receiver_name' => $message->receiver->name,
                 'message_text' => $message->message_text,
                 'time' => $message->created_at->format('H:i'),
-                'date' => $message->created_at->format('Y-m-d'),
+                'date' => $message->created_at->format('Y-m-d, D'),
                 'is_read' => $message->is_read,
             ];
         }));
@@ -90,6 +90,8 @@ class ChatController extends Controller
                     'user_id' => $contact->id,
                     'name' => $contact->name,
                     'email' => $contact->email,
+                    'divisi' => $contact->divisi,
+                    'kelas' => $contact->kelas,
                     'last_message' => $message->message_text,
                     'last_online' => Carbon::parse($contact->last_online)->diffForHumans(),
                 ];
