@@ -31,13 +31,13 @@ class ChatController extends Controller
         return response()->json(['status' => 'Message Sent!', 'message' => $chat], 201);
     }
 
-    public function getMessages($receiverId)
+    public function getMessages($userId)
 {
-    $messages = ChatMessage::where(function($query) use ($receiverId) {
+    $messages = ChatMessage::where(function($query) use ($userId) {
         $query->where('sender_id', Auth::id())
-              ->where('receiver_id', $receiverId);
-    })->orWhere(function($query) use ($receiverId) {
-        $query->where('sender_id', $receiverId)
+              ->where('receiver_id', $userId);
+    })->orWhere(function($query) use ($userId) {
+        $query->where('sender_id', $userId)
               ->where('receiver_id', Auth::id());
     })->get();
 
