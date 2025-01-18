@@ -48,13 +48,13 @@ class ChatController extends Controller
 
         $messages = ChatMessage::where(function ($query) use ($receiverId) {
             $query->where('sender_id', Auth::id())
-                  ->where('receiver_id', $receiverId);
+                ->where('receiver_id', $receiverId);
         })->orWhere(function ($query) use ($receiverId) {
             $query->where('sender_id', $receiverId)
-                  ->where('receiver_id', Auth::id());
+                ->where('receiver_id', Auth::id());
         })->with(['sender', 'receiver'])
-          ->orderBy('created_at', 'asc')
-          ->get();
+            ->orderBy('created_at', 'asc')
+            ->get();
 
         // Format respons
         return response()->json($messages->map(function ($message) {
@@ -96,5 +96,22 @@ class ChatController extends Controller
             })->unique('user_id')->values();
 
         return response()->json($contacts);
+    }
+
+    public function markAsRead(Request $request)
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $validatedData = $request->validate([
+            'receiver_id' => 'required|exists:users,id',
+        ]);
+
+        ChatMessage::where('receiver_id', Auth::id())
+            ->where('sender_id', $validatedData['receiver_id'])
+            ->update(['is_read' => true]);
+
+        return response()->json(['status' => 'Messages marked as read']);
     }
 }

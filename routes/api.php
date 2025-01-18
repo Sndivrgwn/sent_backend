@@ -33,6 +33,7 @@ use Illuminate\Support\Facades\Route;
     Route::middleware('auth:sanctum')->group(function() {
         Route::post('/chat', [ChatController::class, 'sendMessage']);
         Route::get('/chat/{userId}', [ChatController::class, 'getMessages']);
+        Route::post('/chat/messages/mark-as-read', [ChatController::class, 'markAsRead']);
         Route::get('/contact', [ChatController::class, 'getChatContacts']);
     });
     
