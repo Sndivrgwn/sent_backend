@@ -31,51 +31,67 @@ class ChatController extends Controller
         return response()->json(['status' => 'Message Sent!', 'message' => $chat], 201);
     }
 
-    public function getMessages($userId)
+    public function getMessages($receiverId)
 {
-    $messages = ChatMessage::where(function($query) use ($userId) {
-        $query->where('sender_id', Auth::id())
-              ->where('receiver_id', $userId);
-    })->orWhere(function($query) use ($userId) {
-        $query->where('sender_id', $userId)
-              ->where('receiver_id', Auth::id());
-    })->get();
+    // Ambil semua pesan dengan relasi sender dan receiver berdasarkan receiver_id
+    $messages = ChatMessage::where('receiver_id', $receiverId)
+        ->with(['sender', 'receiver']) // Eager loading untuk relasi
+        ->get();
 
-    return response()->json($messages);
+    // Kelompokkan pesan berdasarkan sender_id
+    $groupedMessages = $messages->groupBy('sender_id')->map(function ($group, $senderId) {
+        // Ambil nama sender dari relasi
+        $senderName = $group->first()->sender->name ?? 'Unknown';
+
+        return [
+            'sender_id' => $senderId,
+            'sender_name' => $senderName,
+            'messages' => $group->map(function ($message) {
+                return [
+                    'receiver_id' => $message->receiver->id ?? null,
+                    'receiver_name' => $message->receiver->name ?? 'Unknown',
+                    'message_text' => $message->message_text,
+                    'time' => $message->created_at->format('H:i'),
+                    'day' => $message->created_at->format('D'),
+                ];
+            })->values()
+        ];
+    })->values();
+
+    // Mengembalikan data sebagai JSON
+    return response()->json($groupedMessages);
 }
 
-    public function getAllMessage() {
-         // Mengambil semua pesan dari tabel messages
-         $messages = ChatMessage::all();
 
-         // Mengelompokkan pesan berdasarkan sender_id dan mengambil nama sender serta receiver
-         $groupedMessages = $messages->groupBy('sender_id')->map(function ($group, $senderId) {
-             // Mengambil nama pengirim (sender) berdasarkan sender_id
-             $sender = User::find($senderId); // Mengambil data user berdasarkan sender_id
-             $senderName = $sender ? $sender->name : 'Unknown'; // Nama sender
-     
-             return [
-                 'sender_id' => $senderId,
-                 'sender_name' => $senderName,
-                 'messages' => $group->map(function ($message) {
-                     // Mengambil nama penerima (receiver) berdasarkan receiver_id
-                     $receiver = User::find($message->receiver_id); // Mengambil data user berdasarkan receiver_id
-                     $receiverName = $receiver ? $receiver->name : 'Unknown'; // Nama receiver
-     
-                     return [
-                         'receiver_id' => $receiver->id,
-                         'receiver_name' => $receiverName,
-                         'message_text' => $message->message_text,
-                         'time' => Carbon::parse($message->created_at)->format('H:i'),
-                         'day' => Carbon::parse($message->created_at)->format('D')
-                     ];
-                 })->values()
-             ];
-         })->values();
-     
-         // Mengembalikan data sebagai JSON
-         return response()->json($groupedMessages);
-    }
+    public function getAllMessage()
+{
+    // Ambil semua pesan dengan relasi sender dan receiver menggunakan eager loading
+    $messages = ChatMessage::with(['sender', 'receiver'])->get();
+
+    // Kelompokkan pesan berdasarkan sender_id
+    $groupedMessages = $messages->groupBy('sender_id')->map(function ($group, $senderId) {
+        // Ambil nama sender dari relasi
+        $senderName = $group->first()->sender->name ?? 'Unknown';
+
+        return [
+            'sender_id' => $senderId,
+            'sender_name' => $senderName,
+            'messages' => $group->map(function ($message) {
+                return [
+                    'receiver_id' => $message->receiver->id ?? null,
+                    'receiver_name' => $message->receiver->name ?? 'Unknown',
+                    'message_text' => $message->message_text,
+                    'time' => $message->created_at->format('H:i'),
+                    'day' => $message->created_at->format('D'),
+                ];
+            })->values()
+        ];
+    })->values();
+
+    // Mengembalikan data sebagai JSON
+    return response()->json($groupedMessages);
+}
+
     
     public function getContactInfo()
 {
