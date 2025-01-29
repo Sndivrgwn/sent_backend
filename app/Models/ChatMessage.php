@@ -12,8 +12,10 @@ class ChatMessage extends Model
     protected $fillable = [
         'sender_id',
         'receiver_id',
+        'group_id',
         'message_text',
         'is_read',
+        'is_broadcast'
     ];
 
     public function sender()
@@ -24,5 +26,15 @@ class ChatMessage extends Model
     public function receiver()
     {
         return $this->belongsTo(User::class, 'receiver_id');
+    }
+
+    public function group()
+    {
+        return $this->belongsTo(ChatGroup::class, 'group_id');
+    }
+
+    public function scopeBroadcast($query)
+    {
+        return $query->where('is_broadcast', true);
     }
 }

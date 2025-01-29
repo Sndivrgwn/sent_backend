@@ -61,7 +61,7 @@ class ChatController extends Controller
         return response()->json($messages->map(function ($message) {
             $jakartaTimezone = 'Asia/Jakarta';
             $createdAtInJakarta = $message->created_at->setTimezone($jakartaTimezone);
-    
+
             return [
                 'sender_id' => $message->sender->id,
                 'sender_name' => $message->sender->name,
@@ -75,6 +75,49 @@ class ChatController extends Controller
         }));
     }
 
+    public function deleteSingleChat($messageId)
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $currentUserId = Auth::id();
+
+        // Cari pesan berdasarkan ID dan pastikan hanya bisa dihapus oleh pengirim atau penerima
+        $chatMessage = ChatMessage::where('id', $messageId)
+            ->where(function ($query) use ($currentUserId) {
+                $query->where('sender_id', $currentUserId)
+                    ->orWhere('receiver_id', $currentUserId);
+            })
+            ->first();
+
+        if (!$chatMessage) {
+            return response()->json(['error' => 'Message not found or unauthorized'], 404);
+        }
+
+        $chatMessage->delete();
+
+        return response()->json(['message' => 'Chat message deleted successfully']);
+    }
+
+    public function deleteChatWithUser($userId)
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $currentUserId = Auth::id();
+
+        // Hapus semua pesan antara user yang sedang login dengan user lain
+        ChatMessage::where(function ($query) use ($currentUserId, $userId) {
+            $query->where('sender_id', $currentUserId)->where('receiver_id', $userId);
+        })->orWhere(function ($query) use ($currentUserId, $userId) {
+            $query->where('sender_id', $userId)->where('receiver_id', $currentUserId);
+        })->delete();
+
+        return response()->json(['message' => 'Chat deleted successfully']);
+    }
+
     // Mengambil daftar kontak dengan siapa pengguna pernah mengirim atau menerima pesan
     public function getChatContacts()
     {
@@ -82,24 +125,29 @@ class ChatController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        // Ambil semua kontak yang pernah berinteraksi dengan pengguna
-        $contacts = ChatMessage::where('sender_id', Auth::id())
-            ->orWhere('receiver_id', Auth::id())
-            ->with(['sender', 'receiver'])
-            ->get()
-            ->map(function ($message) {
-                $contact = $message->sender_id === Auth::id() ? $message->receiver : $message->sender;
+        $currentUserId = Auth::id();
 
-                return [
-                    'user_id' => $contact->id,
-                    'name' => $contact->name,
-                    'email' => $contact->email,
-                    'divisi' => $contact->divisi,
-                    'kelas' => $contact->kelas,
-                    'last_message' => $message->message_text,
-                    'last_online' => Carbon::parse($contact->last_online)->diffForHumans(),
-                ];
-            })->unique('user_id')->values();
+        // Ambil semua user kecuali user yang sedang login
+        $users = User::where('id', '!=', $currentUserId)->get();
+
+        // Ambil pesan terakhir antara user yang login dengan setiap user lain
+        $contacts = $users->map(function ($user) use ($currentUserId) {
+            $lastMessage = ChatMessage::where(function ($query) use ($currentUserId, $user) {
+                $query->where('sender_id', $currentUserId)->where('receiver_id', $user->id);
+            })->orWhere(function ($query) use ($currentUserId, $user) {
+                $query->where('sender_id', $user->id)->where('receiver_id', $currentUserId);
+            })->latest()->first();
+
+            return [
+                'user_id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'divisi' => $user->divisi,
+                'kelas' => $user->kelas,
+                'last_message' => $lastMessage ? $lastMessage->message_text : null,
+                'last_online' => $user->last_online ? Carbon::parse($user->last_online)->diffForHumans() : 'Never',
+            ];
+        });
 
         return response()->json($contacts);
     }
@@ -119,5 +167,45 @@ class ChatController extends Controller
             ->update(['is_read' => true]);
 
         return response()->json(['status' => 'Messages marked as read']);
+    }
+
+    public function sendBroadcastMessage(Request $request)
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $validatedData = $request->validate([
+            'message_text' => 'required|string|max:1000',
+        ]);
+
+        $senderId = Auth::id();
+        $users = User::where('id', '!=', $senderId)->get(); // Kirim ke semua user kecuali pengirim
+
+        foreach ($users as $user) {
+            ChatMessage::create([
+                'sender_id' => $senderId,
+                'receiver_id' => $user->id,
+                'message_text' => $validatedData['message_text'],
+                'is_broadcast' => true,
+            ]);
+        }
+
+        return response()->json(['message' => 'Broadcast message sent successfully!']);
+    }
+
+    public function getBroadcastMessages()
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $messages = ChatMessage::where('receiver_id', Auth::id())
+            ->where('is_broadcast', true)
+            ->with('sender:id,name,email')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return response()->json($messages);
     }
 }

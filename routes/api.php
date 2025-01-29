@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Auth\authController as AuthAuthController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\GroupChatController;
 use App\Http\Controllers\user\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,13 @@ use Illuminate\Support\Facades\Route;
         Route::get('/chat/{userId}', [ChatController::class, 'getMessages']);
         Route::post('/chat/messages/mark-as-read', [ChatController::class, 'markAsRead']);
         Route::get('/contact', [ChatController::class, 'getChatContacts']);
+        Route::delete('/chat/message/{messageId}', [ChatController::class, 'deleteSingleChat']);
+        Route::delete('/chat/{userId}', [ChatController::class, 'deleteChatWithUser']);
+        Route::post('/chat/group', [GroupChatController::class, 'createGroup']);
+        Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
+        Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
+        Route::post('/chat/broadcast', [ChatController::class, 'sendBroadcastMessage']);
+        Route::get('/chat/broadcast', [ChatController::class, 'getBroadcastMessages']);
     });
     
     
