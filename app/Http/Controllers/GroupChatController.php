@@ -94,4 +94,33 @@ class GroupChatController extends Controller
 
         return response()->json($messages);
     }
+
+    public function getGroupContacts()
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $currentUserId = Auth::id();
+
+        // Ambil semua grup yang diikuti oleh user yang sedang login
+        $groups = ChatGroup::whereHas('members', function ($query) use ($currentUserId) {
+            $query->where('user_id', $currentUserId);
+        })->get();
+
+        // Ambil pesan terakhir dalam setiap grup
+        $groupContacts = $groups->map(function ($group) {
+            $lastMessage = ChatGroupMember::where('group_id', $group->id)->latest()->first();
+
+            return [
+                'group_id' => $group->id,
+                'name' => $group->name,
+                'description' => $group->description,
+                'last_message' => $lastMessage ? $lastMessage->message_text : null,
+                'last_message_time' => $lastMessage ? $lastMessage->created_at->diffForHumans() : 'Never',
+            ];
+        });
+
+        return response()->json($groupContacts);
+    }
 }

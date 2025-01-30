@@ -41,6 +41,7 @@ use Illuminate\Support\Facades\Route;
         Route::post('/chat/group', [GroupChatController::class, 'createGroup']);
         Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
         Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
+        Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
         Route::post('/chat/broadcast', [ChatController::class, 'sendBroadcastMessage']);
         Route::get('/chat/broadcast', [ChatController::class, 'getBroadcastMessages']);
     });
@@ -54,7 +55,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
     
 /**
-//  * route "/register"
+//  * route "/register"==
 //  * @method "POST"
 //  */
 // Route::post('/register', RegisterController::class)->name('register');
