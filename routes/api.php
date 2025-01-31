@@ -8,6 +8,7 @@ use App\Http\Controllers\auth\imgController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\GroupChatController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\user\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -52,7 +53,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('/register', [AuthAuthController::class, 'register']);
     Route::post('/login', [AuthAuthController::class, 'login']);
     Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
-    Route::put('/update-image/{id}', [imgController::class, 'updateImg']);
+    Route::put('/update-image/{id}', [ImageController::class, 'updateImg']);
 
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
     
