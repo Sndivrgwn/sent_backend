@@ -38,6 +38,7 @@ class RegisterController extends Controller
             'email'     => $request->email,
             'kelas'     => $request->kelas,
             'divisi'    => $request->divisi, 
+            'img'    => $request->img, 
             'password'  => bcrypt($request->password)
         ]);
 
