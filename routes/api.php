@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\LoginController as ApiLoginController;
 use App\Http\Controllers\Api\LogoutController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Auth\authController as AuthAuthController;
+use App\Http\Controllers\auth\imgController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\GroupChatController;
@@ -51,7 +52,8 @@ use Illuminate\Support\Facades\Route;
     Route::post('/register', [AuthAuthController::class, 'register']);
     Route::post('/login', [AuthAuthController::class, 'login']);
     Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
-    
+    Route::put('/update-image/{id}', [imgController::class, 'updateImg']);
+
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
     
 /**
