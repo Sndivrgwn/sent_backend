@@ -156,6 +156,7 @@ class GroupChatController extends Controller
 
             return [
                 'group_id' => $group->id,
+                'img' => $group->img,
                 'name' => $group->name,
                 'description' => $group->description,
                 'last_message' => $lastMessage ? $lastMessage->message_text : null,

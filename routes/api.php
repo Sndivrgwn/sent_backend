@@ -53,6 +53,7 @@ use Illuminate\Support\Facades\Route;
     Route::post('/login', [AuthAuthController::class, 'login']);
     Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
     Route::put('/update-image/{id}', [ImageController::class, 'updateImg']);
+    Route::put('/update-image-group/{id}', [ImageController::class, 'updateGroupImg']);
 
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
     
