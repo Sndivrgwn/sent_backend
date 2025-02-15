@@ -13,8 +13,8 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $validatedData = $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'nama' => 'nullable|string|max:255',
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name' => 'nullable|string|max:255',
             'divisi' => 'nullable|string|max:255',
             'kelas' => 'nullable|string|max:255',
         ]);
