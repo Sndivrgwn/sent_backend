@@ -47,6 +47,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
         Route::post('/chat/broadcast', [ChatController::class, 'sendBroadcastMessage']);
         Route::get('/chat/broadcast', [ChatController::class, 'getBroadcastMessages']);
+        Route::put('/user', [UserController::class, 'update']);
     });
     
     
@@ -57,7 +58,6 @@ use Illuminate\Support\Facades\Route;
     Route::put('/update-image-group/{id}', [ImageController::class, 'updateGroupImg']);
 
     Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
-    Route::put('/users/{id}', [UserController::class, 'update']);
     
 /**
 //  * route "/register"==
