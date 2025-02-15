@@ -63,6 +63,7 @@ class ChatController extends Controller
             $createdAtInJakarta = $message->created_at->setTimezone($jakartaTimezone);
 
             return [
+                'message_id' => $message->id,
                 'sender_id' => $message->sender->id,
                 'sender_name' => $message->sender->name,
                 'receiver_id' => $message->receiver->id,
@@ -208,5 +209,33 @@ class ChatController extends Controller
             ->get();
 
         return response()->json($messages);
+    }
+
+    public function editMessage(Request $request, $messageId)
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $validatedData = $request->validate([
+            'message_text' => 'required|string|max:1000',
+        ]);
+
+        $currentUserId = Auth::id();
+
+        // Cari pesan berdasarkan ID dan pastikan hanya bisa diedit oleh pengirim
+        $chatMessage = ChatMessage::where('id', $messageId)
+            ->where('sender_id', $currentUserId)
+            ->first();
+
+        if (!$chatMessage) {
+            return response()->json(['error' => 'Message not found or unauthorized'], 404);
+        }
+
+        // Update teks pesan
+        $chatMessage->message_text = $validatedData['message_text'];
+        $chatMessage->save();
+
+        return response()->json(['message' => 'Chat message updated successfully', 'updated_message' => $chatMessage]);
     }
 }

@@ -37,6 +37,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/chat/{userId}', [ChatController::class, 'getMessages']);
         Route::post('/chat/messages/mark-as-read', [ChatController::class, 'markAsRead']);
         Route::get('/contact', [ChatController::class, 'getChatContacts']);
+        Route::put('/chat/message/{messageId}', [ChatController::class, 'editMessage']);
         Route::delete('/chat/message/{messageId}', [ChatController::class, 'deleteSingleChat']);
         Route::delete('/chat/{userId}', [ChatController::class, 'deleteChatWithUser']);
         Route::post('/chat/group', [GroupChatController::class, 'createGroup']);
