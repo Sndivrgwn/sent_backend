@@ -9,25 +9,34 @@ use Illuminate\Support\Facades\Storage;
 class UserController extends Controller
 {
     public function update(Request $request, $id)
-    {
-        $user = User::findOrFail($id);
+{
+    $user = User::findOrFail($id);
 
-        $validatedData = $request->validate([
-            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'name' => 'nullable|string|max:255',
-            'divisi' => 'nullable|string|max:255',
-            'kelas' => 'nullable|string|max:255',
-        ]);
-
-        if ($request->hasFile('image')) {
-            if ($user->image) {
-                Storage::delete($user->image);
-            }
-            $validatedData['image'] = $request->file('image')->store('user_images');
+    // Jika ada file gambar baru, hapus yang lama dan simpan yang baru
+    if ($request->hasFile('image')) {
+        if ($user->img) {
+            Storage::delete($user->img);
         }
-
-        $user->update(array_filter($validatedData));
-
-        return response()->json(['message' => 'User updated successfully', 'user' => $user]);
+        $user->img = $request->file('image')->store('user_images');
     }
+
+    // Update hanya field yang diberikan dalam request
+    if ($request->filled('name')) {
+        $user->name = $request->name;
+    }
+    if ($request->filled('kelas')) {
+        $user->kelas = $request->kelas;
+    }
+    if ($request->filled('divisi')) {
+        $user->divisi = $request->divisi;
+    }
+
+    $user->save(); // Simpan perubahan
+
+    return response()->json([
+        'message' => 'User updated successfully',
+        'user' => $user
+    ]);
+}
+
 }
