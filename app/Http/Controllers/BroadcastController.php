@@ -61,7 +61,7 @@ class BroadcastController extends Controller
 
         ChatMessage::insert($messages);
 
-        return response()->json(['message' => 'Broadcast message sent successfully!']);
+        return response()->json(['message' => 'Broadcast message sent successfully!', $messages]);
     }
 
     public function getCreatedBroadcasts()
