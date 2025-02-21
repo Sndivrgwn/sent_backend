@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\LogoutController;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Auth\authController as AuthAuthController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BroadcastController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\GroupChatController;
 use App\Http\Controllers\ImageController;
@@ -45,8 +46,8 @@ use Illuminate\Support\Facades\Route;
         Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
         Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
         Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
-        Route::post('/chat/broadcast', [ChatController::class, 'sendBroadcastMessage']);
-        Route::get('/chat/broadcast', [ChatController::class, 'getBroadcastMessages']);
+        Route::post('/chat/broadcast', [BroadcastController::class, 'sendBroadcastMessage']);
+        Route::get('/chat/broadcast', [BroadcastController::class, 'getBroadcastMessages']);
     });
     
     

@@ -171,45 +171,7 @@ class ChatController extends Controller
         return response()->json(['status' => 'Messages marked as read']);
     }
 
-    public function sendBroadcastMessage(Request $request)
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        $validatedData = $request->validate([
-            'message_text' => 'required|string|max:1000',
-        ]);
-
-        $senderId = Auth::id();
-        $users = User::where('id', '!=', $senderId)->get(); // Kirim ke semua user kecuali pengirim
-
-        foreach ($users as $user) {
-            ChatMessage::create([
-                'sender_id' => $senderId,
-                'receiver_id' => $user->id,
-                'message_text' => $validatedData['message_text'],
-                'is_broadcast' => true,
-            ]);
-        }
-
-        return response()->json(['message' => 'Broadcast message sent successfully!']);
-    }
-
-    public function getBroadcastMessages()
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        $messages = ChatMessage::where('receiver_id', Auth::id())
-            ->where('is_broadcast', true)
-            ->with('sender:id,name,email')
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        return response()->json($messages);
-    }
+   
 
     public function editMessage(Request $request, $messageId)
     {
