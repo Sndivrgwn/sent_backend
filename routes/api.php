@@ -46,6 +46,8 @@ use Illuminate\Support\Facades\Route;
         Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
         Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
         Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
+        Route::post('/chat/broadcast/create', [BroadcastController::class, 'createBroadcast']); // Menyimpan daftar penerima
+        Route::get('/chat/broadcast/list', [BroadcastController::class, 'getCreatedBroadcasts']);
         Route::post('/chat/broadcast', [BroadcastController::class, 'sendBroadcastMessage']);
         Route::get('/chat/broadcast', [BroadcastController::class, 'getBroadcastMessages']);
     });
