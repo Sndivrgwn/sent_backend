@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Broadcast;
 use App\Models\ChatMessage;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class BroadcastController extends Controller
 {
-    // Menyimpan daftar penerima broadcast
     public function createBroadcast(Request $request)
     {
         if (!Auth::check()) {
@@ -17,34 +16,18 @@ class BroadcastController extends Controller
         }
 
         $validatedData = $request->validate([
-            'recipient_ids' => 'required|array', // Harus berupa array
-            'recipient_ids.*' => 'exists:users,id', // Setiap ID harus valid
+            'recipient_ids' => 'required|array|min:1',
+            'recipient_ids.*' => 'exists:users,id',
         ]);
 
-        $recipientIds = array_unique($validatedData['recipient_ids']);
-        session(['broadcast_recipients' => $recipientIds]); // Simpan daftar penerima di sesi
+        $broadcast = Broadcast::create([
+            'sender_id' => Auth::id(),
+            'recipient_ids' => array_unique($validatedData['recipient_ids']),
+        ]);
 
-        return response()->json(['message' => 'Broadcast recipients saved.', 'recipients' => $recipientIds]);
+        return response()->json(['message' => 'Broadcast created successfully!', 'broadcast' => $broadcast]);
     }
 
-    // Menampilkan daftar broadcast yang telah dibuat
-    public function getCreatedBroadcasts()
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        $senderId = Auth::id();
-        $broadcasts = ChatMessage::where('sender_id', $senderId)
-            ->where('is_broadcast', true)
-            ->with('receiver:id,name,email')
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        return response()->json($broadcasts);
-    }
-
-    // Mengirim pesan broadcast ke daftar penerima yang telah dipilih
     public function sendBroadcastMessage(Request $request)
     {
         if (!Auth::check()) {
@@ -52,20 +35,22 @@ class BroadcastController extends Controller
         }
 
         $validatedData = $request->validate([
+            'broadcast_id' => 'required|exists:broadcasts,id',
             'message_text' => 'required|string|max:1000',
         ]);
 
-        $senderId = Auth::id();
-        $recipientIds = session('broadcast_recipients', []); // Ambil daftar penerima dari sesi
+        $broadcast = Broadcast::where('id', $validatedData['broadcast_id'])
+            ->where('sender_id', Auth::id())
+            ->first();
 
-        if (empty($recipientIds)) {
-            return response()->json(['error' => 'No recipients selected'], 400);
+        if (!$broadcast) {
+            return response()->json(['error' => 'Broadcast not found or unauthorized'], 403);
         }
 
         $messages = [];
-        foreach ($recipientIds as $userId) {
+        foreach ($broadcast->recipient_ids as $userId) {
             $messages[] = [
-                'sender_id' => $senderId,
+                'sender_id' => Auth::id(),
                 'receiver_id' => $userId,
                 'message_text' => $validatedData['message_text'],
                 'is_broadcast' => true,
@@ -74,12 +59,24 @@ class BroadcastController extends Controller
             ];
         }
 
-        ChatMessage::insert($messages); // Insert batch untuk efisiensi
+        ChatMessage::insert($messages);
 
         return response()->json(['message' => 'Broadcast message sent successfully!']);
     }
 
-    // Menampilkan pesan yang diterima dalam broadcast
+    public function getCreatedBroadcasts()
+    {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $broadcasts = Broadcast::where('sender_id', Auth::id())
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return response()->json($broadcasts);
+    }
+
     public function getBroadcastMessages()
     {
         if (!Auth::check()) {
