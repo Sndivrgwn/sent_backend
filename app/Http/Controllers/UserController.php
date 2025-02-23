@@ -11,31 +11,38 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Use 'img' instead of 'image'
             'name' => 'nullable|string|max:255',
             'kelas' => 'nullable|string|max:255',
             'divisi' => 'nullable|string|max:255',
         ]);
-    
+
         try {
             $user = User::findOrFail($id);
-    
+
             // Update image if provided
-            if ($request->hasFile('image')) {
+            if ($request->hasFile('img')) { // Use 'img' instead of 'image'
                 if ($user->img) {
                     Storage::delete($user->img);
                 }
-                $user->img = $request->file('image')->store('user_images/' . $user->id);
+                $user->img = $request->file('img')->store('user_images/' . $user->id); // Use 'img' instead of 'image'
             }
-    
+
             // Update other fields
             $user->update($request->only(['name', 'kelas', 'divisi']));
-    
+
             return response()->json([
                 'message' => 'User updated successfully',
-                'user' => $user
+                'user' => [
+                    'id' => $user->id,
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'kelas' => $user->kelas,
+                    'divisi' => $user->divisi,
+                    'img' => asset('storage/' . $user->img), // Return full image URL
+                ],
             ], 200);
-    
+
         } catch (\Exception $e) {
             return response()->json([
                 'message' => 'An error occurred while updating the user.',
@@ -43,5 +50,4 @@ class UserController extends Controller
             ], 500);
         }
     }
-
 }
