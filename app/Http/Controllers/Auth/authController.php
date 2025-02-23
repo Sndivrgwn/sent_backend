@@ -72,6 +72,8 @@ class authController extends Controller
         $user = User::find($id);
 
         if ($user) {
+            $user->img = asset('storage/' . $user->img);
+
             return response()->json($user);
         } else {
             return response()->json(['error' => 'User  not found'], 404);
