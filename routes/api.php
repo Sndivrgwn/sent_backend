@@ -81,7 +81,14 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    $user = $request->user();
+
+    // Modifikasi properti img agar mengembalikan URL lengkap
+    if ($user && $user->img) {
+        $user->img = asset('storage/' . $user->img);
+    }
+
+    return response()->json($user);
 });
 
 
