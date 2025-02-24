@@ -145,7 +145,7 @@ class ChatController extends Controller
                 'email' => $user->email,
                 'divisi' => $user->divisi,
                 'kelas' => $user->kelas,
-                'img' => $user->img,
+                'img' => asset('storage/' . $user->img),
                 'last_message' => $lastMessage ? $lastMessage->message_text : null,
                 'last_online' => $user->last_online ? Carbon::parse($user->last_online)->diffForHumans() : 'Never',
             ];
