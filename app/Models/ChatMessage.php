@@ -37,4 +37,9 @@ class ChatMessage extends Model
     {
         return $query->where('is_broadcast', true);
     }
+
+    public function broadcast()
+    {
+        return $this->belongsTo(Broadcast::class, 'broadcast_id');
+    }
 }

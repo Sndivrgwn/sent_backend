@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Pusher\Pusher;
 
 class BroadcastController extends Controller
 {
@@ -31,68 +32,75 @@ class BroadcastController extends Controller
     }
 
     public function sendBroadcastMessage(Request $request)
-{
-    try {
-        // Check if the user is authenticated
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+    {
+        try {
+            if (!Auth::check()) {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+    
+            $validatedData = $request->validate([
+                'broadcast_id' => 'required|exists:broadcasts,id',
+                'message_text' => 'required|string|max:1000',
+            ]);
+    
+            $broadcast = Broadcast::where('id', $validatedData['broadcast_id'])
+                ->where('sender_id', Auth::id())
+                ->first();
+    
+            if (!$broadcast) {
+                return response()->json(['error' => 'Broadcast not found or unauthorized'], 403);
+            }
+    
+            $recipientIds = $broadcast->recipient_ids;
+    
+            if (!is_array($recipientIds)) {
+                return response()->json(['error' => 'Invalid recipient_ids format'], 400);
+            }
+    
+            $invalidRecipients = array_diff($recipientIds, User::pluck('id')->toArray());
+            if (!empty($invalidRecipients)) {
+                return response()->json(['error' => 'Invalid recipient IDs: ' . implode(', ', $invalidRecipients)], 400);
+            }
+    
+            $messages = [];
+            foreach ($recipientIds as $userId) {
+                $messages[] = [
+                    'sender_id' => Auth::id(),
+                    'receiver_id' => $userId,
+                    'broadcast_id' => $broadcast->id, // Add this line
+                    'message_text' => $validatedData['message_text'],
+                    'is_broadcast' => true,
+                    'created_at' => now(),
+                    'updated_at' => now(),
+                ];
+            }
+    
+            ChatMessage::insert($messages);
+    
+            // Trigger Pusher event
+            $pusher = new Pusher(
+                env('PUSHER_APP_KEY'),
+                env('PUSHER_APP_SECRET'),
+                env('PUSHER_APP_ID'),
+                [
+                    'cluster' => env('PUSHER_APP_CLUSTER'),
+                    'useTLS' => true,
+                ]
+            );
+    
+            foreach ($messages as $message) {
+                $pusher->trigger('broadcast-chat-channel', 'broadcast-message-sent', $message);
+            }
+    
+            return response()->json([
+                'message' => 'Broadcast message sent successfully!',
+                'data' => $messages
+            ]);
+        } catch (\Exception $e) {
+            Log::error('Error sending broadcast message: ' . $e->getMessage());
+            return response()->json(['error' => 'Internal Server Error'], 500);
         }
-
-        // Validate the request data
-        $validatedData = $request->validate([
-            'broadcast_id' => 'required|exists:broadcasts,id',
-            'message_text' => 'required|string|max:1000',
-        ]);
-
-        // Find the broadcast and ensure the sender is authorized
-        $broadcast = Broadcast::where('id', $validatedData['broadcast_id'])
-            ->where('sender_id', Auth::id())
-            ->first();
-
-        if (!$broadcast) {
-            return response()->json(['error' => 'Broadcast not found or unauthorized'], 403);
-        }
-
-        // Get recipient_ids (automatically cast to array)
-        $recipientIds = $broadcast->recipient_ids;
-
-        // Ensure recipient_ids is an array
-        if (!is_array($recipientIds)) {
-            return response()->json(['error' => 'Invalid recipient_ids format'], 400);
-        }
-
-        // Validate that all recipient IDs exist in the users table
-        $invalidRecipients = array_diff($recipientIds, User::pluck('id')->toArray());
-        if (!empty($invalidRecipients)) {
-            return response()->json(['error' => 'Invalid recipient IDs: ' . implode(', ', $invalidRecipients)], 400);
-        }
-
-        // Prepare messages for all recipients
-        $messages = [];
-        foreach ($recipientIds as $userId) {
-            $messages[] = [
-                'sender_id' => Auth::id(),
-                'receiver_id' => $userId,
-                'message_text' => $validatedData['message_text'],
-                'is_broadcast' => true,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ];
-        }
-
-        // Insert messages into the database
-        ChatMessage::insert($messages);
-
-        return response()->json([
-            'message' => 'Broadcast message sent successfully!',
-            'data' => $messages
-        ]);
-    } catch (\Exception $e) {
-        // Log the error
-        Log::error('Error sending broadcast message: ' . $e->getMessage());
-        return response()->json(['error' => 'Internal Server Error'], 500);
     }
-}
 
     public function getCreatedBroadcasts()
     {
@@ -107,18 +115,26 @@ class BroadcastController extends Controller
         return response()->json($broadcasts);
     }
 
-    public function getBroadcastMessages()
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        $messages = ChatMessage::where('receiver_id', Auth::id())
-            ->where('is_broadcast', true)
-            ->with('sender:id,name,email')
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        return response()->json($messages);
+    public function getBroadcastMessages(Request $request)
+{
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthorized'], 401);
     }
+
+    $request->validate([
+        'broadcast_id' => 'required|exists:broadcasts,id',
+    ]);
+
+    $broadcastId = $request->input('broadcast_id');
+
+    $messages = ChatMessage::where('is_broadcast', true)
+        ->whereHas('broadcast', function ($query) use ($broadcastId) {
+            $query->where('id', $broadcastId);
+        })
+        ->with('sender:id,name,email')
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+    return response()->json($messages);
+}
 }
