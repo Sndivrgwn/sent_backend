@@ -117,24 +117,25 @@ class BroadcastController extends Controller
 
     public function getBroadcastMessages(Request $request)
 {
-    if (!Auth::check()) {
+    $user = auth()->user();
+
+    if (!$user) {
         return response()->json(['error' => 'Unauthorized'], 401);
     }
 
-    $request->validate([
+    $validated = $request->validate([
         'broadcast_id' => 'required|exists:broadcasts,id',
     ]);
 
-    $broadcastId = $request->input('broadcast_id');
+    $broadcastId = $validated['broadcast_id'];
 
+    // Ambil pesan berdasarkan broadcast_id langsung
     $messages = ChatMessage::where('is_broadcast', true)
-        ->whereHas('broadcast', function ($query) use ($broadcastId) {
-            $query->where('id', $broadcastId);
-        })
+        ->where('broadcast_id', $broadcastId)
         ->with('sender:id,name,email')
-        ->orderBy('created_at', 'desc')
-        ->get();
+        ->orderBy('created_at', 'desc');
 
     return response()->json($messages);
 }
+
 }
