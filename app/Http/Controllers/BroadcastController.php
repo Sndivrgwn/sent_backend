@@ -113,7 +113,7 @@ class BroadcastController extends Controller
         return response()->json($broadcasts);
     }
 
-    public function getBroadcastMessages(Request $request)
+    public function getBroadcastMessages($broadcastId, Request $request)
 {
     $user = auth()->user();
 
@@ -121,17 +121,12 @@ class BroadcastController extends Controller
         return response()->json(['error' => 'Unauthorized'], 401);
     }
 
-    $validated = $request->validate([
-        'broadcast_id' => 'required|exists:broadcasts,id',
-    ]);
-
-    $broadcastId = $validated['broadcast_id'];
-
     // Ambil pesan berdasarkan broadcast_id langsung
     $messages = ChatMessage::where('is_broadcast', true)
         ->where('broadcast_id', $broadcastId)
         ->with('sender:id,name,email')
-        ->orderBy('created_at', 'desc');
+        ->orderBy('created_at', 'desc')
+        ->get(); // Eksekusi query dengan get()
 
     return response()->json($messages);
 }
