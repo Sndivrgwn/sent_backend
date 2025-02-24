@@ -52,8 +52,10 @@ class BroadcastController extends Controller
             return response()->json(['error' => 'Broadcast not found or unauthorized'], 403);
         }
 
-        // Decode recipient_ids if stored as JSON
-        $recipientIds = json_decode($broadcast->recipient_ids, true);
+        // Get recipient_ids (automatically cast to array)
+        $recipientIds = $broadcast->recipient_ids;
+
+        // Ensure recipient_ids is an array
         if (!is_array($recipientIds)) {
             return response()->json(['error' => 'Invalid recipient_ids format'], 400);
         }
