@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Broadcast;
 use App\Models\ChatMessage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -58,6 +59,12 @@ class BroadcastController extends Controller
         // Ensure recipient_ids is an array
         if (!is_array($recipientIds)) {
             return response()->json(['error' => 'Invalid recipient_ids format'], 400);
+        }
+
+        // Validate that all recipient IDs exist in the users table
+        $invalidRecipients = array_diff($recipientIds, User::pluck('id')->toArray());
+        if (!empty($invalidRecipients)) {
+            return response()->json(['error' => 'Invalid recipient IDs: ' . implode(', ', $invalidRecipients)], 400);
         }
 
         // Prepare messages for all recipients
