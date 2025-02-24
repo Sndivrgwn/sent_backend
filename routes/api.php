@@ -49,7 +49,7 @@ use Illuminate\Support\Facades\Route;
         Route::post('/chat/broadcast/create', [BroadcastController::class, 'createBroadcast']); // Menyimpan daftar penerima
         Route::get('/chat/broadcast/list', [BroadcastController::class, 'getCreatedBroadcasts']);
         Route::post('/chat/broadcast', [BroadcastController::class, 'sendBroadcastMessage']);
-        Route::get('/chat/broadcast', [BroadcastController::class, 'getBroadcastMessages']);
+        Route::get('/chat/broadcast/{broadcast_id}', [BroadcastController::class, 'getBroadcastMessages']);
     });
     
     
