@@ -6,6 +6,7 @@ use App\Models\Broadcast;
 use App\Models\ChatMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class BroadcastController extends Controller
 {
@@ -29,16 +30,20 @@ class BroadcastController extends Controller
     }
 
     public function sendBroadcastMessage(Request $request)
-    {
+{
+    try {
+        // Check if the user is authenticated
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
+        // Validate the request data
         $validatedData = $request->validate([
             'broadcast_id' => 'required|exists:broadcasts,id',
             'message_text' => 'required|string|max:1000',
         ]);
 
+        // Find the broadcast and ensure the sender is authorized
         $broadcast = Broadcast::where('id', $validatedData['broadcast_id'])
             ->where('sender_id', Auth::id())
             ->first();
@@ -47,8 +52,15 @@ class BroadcastController extends Controller
             return response()->json(['error' => 'Broadcast not found or unauthorized'], 403);
         }
 
+        // Decode recipient_ids if stored as JSON
+        $recipientIds = json_decode($broadcast->recipient_ids, true);
+        if (!is_array($recipientIds)) {
+            return response()->json(['error' => 'Invalid recipient_ids format'], 400);
+        }
+
+        // Prepare messages for all recipients
         $messages = [];
-        foreach ($broadcast->recipient_ids as $userId) {
+        foreach ($recipientIds as $userId) {
             $messages[] = [
                 'sender_id' => Auth::id(),
                 'receiver_id' => $userId,
@@ -59,10 +71,19 @@ class BroadcastController extends Controller
             ];
         }
 
+        // Insert messages into the database
         ChatMessage::insert($messages);
 
-        return response()->json(['message' => 'Broadcast message sent successfully!', $messages]);
+        return response()->json([
+            'message' => 'Broadcast message sent successfully!',
+            'data' => $messages
+        ]);
+    } catch (\Exception $e) {
+        // Log the error
+        Log::error('Error sending broadcast message: ' . $e->getMessage());
+        return response()->json(['error' => 'Internal Server Error'], 500);
     }
+}
 
     public function getCreatedBroadcasts()
     {
