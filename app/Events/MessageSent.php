@@ -37,4 +37,19 @@ class MessageSent implements ShouldBroadcast
     {
         return 'message-sent';
     }
+
+    public function broadcastWith()
+{
+    return [
+        'message_id' => $this->chat->id,
+        'sender_id' => $this->chat->sender_id,
+        'sender_name' => $this->chat->sender->name,
+        'receiver_id' => $this->chat->receiver_id,
+        'receiver_name' => $this->chat->receiver->name,
+        'message_text' => $this->chat->message_text,
+        'time' => $this->chat->created_at->setTimezone('Asia/Jakarta')->format('H:i'),
+        'date' => $this->chat->created_at->setTimezone('Asia/Jakarta')->format('Y-m-d, D'),
+        'is_read' => $this->chat->is_read,
+    ];
+}
 }
