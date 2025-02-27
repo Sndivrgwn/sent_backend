@@ -87,51 +87,48 @@ class GroupChatController extends Controller
 }
 
 
-    public function sendGroupMessage(Request $request)
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-    
-        // Validate the request
-        $validatedData = $request->validate([
-            'group_id' => 'required|exists:chat_groups,id',  // Ensure the group exists
-            'message_text' => 'required|string|max:1000',    // Ensure the message text is valid
-        ]);
-    
-        // Find the group by the validated group_id
-        $group = ChatGroup::find($validatedData['group_id']);
-    
-        // Check if the user is a member of the group
-        $isMember = ChatGroupMember::where('group_id', $group->id)
-            ->where('user_id', Auth::id())
-            ->exists();
-    
-        if (!$isMember) {
-            return response()->json(['error' => 'You are not a member of this group'], 403);
-        }
-    
-        // Create and save the message associated with the group and sender
-        $chat = ChatMessage::create([
-            'sender_id' => Auth::id(),         // The user sending the message
-            'group_id' => $group->id,          // The group where the message is being sent
-            'message_text' => $validatedData['message_text'], // The message content
-        ]);
-    
-        // Retrieve the user's name
-        $user = Auth::user(); // Get the authenticated user
-    
-        // Optionally broadcast the message (real-time functionality)
-        event(new GroupMessage($chat));
-    
-        return response()->json([
-            'message' => 'Message sent successfully',
-            'data' => [
-                'chat' => $chat,
-                'user_name' => $user->name, // Include the user's name in the response
-            ]
-        ]);
+public function sendGroupMessage(Request $request)
+{
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthorized'], 401);
     }
+
+    $validatedData = $request->validate([
+        'group_id' => 'required|exists:chat_groups,id',
+        'message_text' => 'required|string|max:1000',
+    ]);
+
+    $group = ChatGroup::find($validatedData['group_id']);
+
+    $isMember = ChatGroupMember::where('group_id', $group->id)
+        ->where('user_id', Auth::id())
+        ->exists();
+
+    if (!$isMember) {
+        return response()->json(['error' => 'You are not a member of this group'], 403);
+    }
+
+    $chat = ChatMessage::create([
+        'sender_id' => Auth::id(),
+        'group_id' => $group->id,
+        'message_text' => $validatedData['message_text'],
+    ]);
+
+    $user = Auth::user();
+
+    Log::info("Mengirim event GroupMessage untuk grup ID: " . $group->id);
+    event(new GroupMessage($chat));
+    Log::info("Event berhasil dikirim");
+    
+
+    return response()->json([
+        'message' => 'Message sent successfully',
+        'data' => [
+            'chat' => $chat,
+            'user_name' => $user->name,
+        ]
+    ]);
+}
 
 
     public function getGroupMessages($groupId)
