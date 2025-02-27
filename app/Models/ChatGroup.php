@@ -9,7 +9,7 @@ class ChatGroup extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'created_by'];
+    protected $fillable = ['name', 'created_by', 'img'];
 
     public function members()
     {

@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
+use Pusher\Pusher;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +21,9 @@ Route::get('/', [HomeController::class, 'index']);
 
 require __DIR__.'/auth.php';
 
+Route::post('/pusher/auth', function (Request $request) {
+    if (Auth::check()) {
+        return Pusher::authorizeChannel($request);
+    }
+    return response()->json(['error' => 'Unauthorized'], 403);
+});
