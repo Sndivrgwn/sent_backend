@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\MessageSent;
+use App\Events\GroupMessage;
 use App\Models\ChatGroup;
 use App\Models\ChatGroupMember;
 use App\Models\ChatMessage;
@@ -122,7 +122,7 @@ class GroupChatController extends Controller
         $user = Auth::user(); // Get the authenticated user
     
         // Optionally broadcast the message (real-time functionality)
-        event(new MessageSent($chat));
+        event(new GroupMessage($chat));
     
         return response()->json([
             'message' => 'Message sent successfully',
