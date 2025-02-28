@@ -8,6 +8,7 @@ use App\Models\ChatGroupMember;
 use App\Models\ChatMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class GroupChatController extends Controller
@@ -167,7 +168,14 @@ class GroupChatController extends Controller
             // Ambil anggota grup dengan join ke tabel users
             $members = ChatGroupMember::where('group_id', $group->id)
                 ->join('users', 'chat_group_members.user_id', '=', 'users.id')
-                ->select('users.id', 'users.name')
+                ->select(
+                    'users.id',
+                    'users.name',
+                    'users.divisi',
+                    'users.email',
+                    DB::raw('CONCAT("' . asset('storage/') . '", users.img) as img'), // Menghasilkan URL lengkap
+                    'users.kelas'
+                )
                 ->get();
 
             return [
