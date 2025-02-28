@@ -78,4 +78,16 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany(ChatMessage::class, 'receiver_id');
     }
+
+    // Relasi ke grup yang dibuat oleh user
+    public function createdGroups()
+    {
+        return $this->hasMany(ChatGroup::class, 'created_by');
+    }
+
+    // Relasi ke grup yang diikuti oleh user
+    public function joinedGroups()
+    {
+        return $this->hasMany(ChatGroupMember::class, 'user_id');
+    }
 }

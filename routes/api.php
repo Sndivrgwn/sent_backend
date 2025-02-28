@@ -27,8 +27,9 @@ use Pusher\Pusher;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 Broadcast::routes(['middleware' => ['auth:sanctum']]);
- 
+
 
 // Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 //     return $request->user();
@@ -39,35 +40,45 @@ Broadcast::routes(['middleware' => ['auth:sanctum']]);
  * @method "POST"
  */
 
-    Route::middleware('auth:sanctum')->group(function() {
-        Route::post('/chat', [ChatController::class, 'sendMessage']);
-        Route::get('/chat/{userId}', [ChatController::class, 'getMessages']);
-        Route::post('/chat/messages/mark-as-read', [ChatController::class, 'markAsRead']);
-        Route::get('/contact', [ChatController::class, 'getChatContacts']);
-        Route::put('/chat/message/{messageId}', [ChatController::class, 'editMessage']);
-        Route::delete('/chat/message/{messageId}', [ChatController::class, 'deleteSingleChat']);
-        Route::delete('/chat/{userId}', [ChatController::class, 'deleteChatWithUser']);
-        Route::post('/chat/group', [GroupChatController::class, 'createGroup']);
-        Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
-        Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
-        Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
-        Route::post('/chat/broadcast/create', [BroadcastController::class, 'createBroadcast']); // Menyimpan daftar penerima
-        Route::get('/chat/broadcast/list', [BroadcastController::class, 'getCreatedBroadcasts']);
-        Route::post('/chat/broadcast', [BroadcastController::class, 'sendBroadcastMessage']);
-        Route::get('/chat/broadcast/{broadcast_id}', [BroadcastController::class, 'getBroadcastMessages']);
-    });
-    
-    
-    
-    Route::post('/register', [AuthAuthController::class, 'register']);
-    Route::post('/login', [AuthAuthController::class, 'login']);
-    Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
-    Route::put('/update-image-group/{id}', [ImageController::class, 'updateGroupImg']);
+Route::middleware('auth:sanctum')->group(function () {
 
-    Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
-    Route::put('/users/{id}', [UserController::class, 'update']);
+    //private chat
+    Route::post('/chat', [ChatController::class, 'sendMessage']);
+    Route::get('/chat/{userId}', [ChatController::class, 'getMessages']);
+    Route::post('/chat/messages/mark-as-read', [ChatController::class, 'markAsRead']);
+    Route::get('/contact', [ChatController::class, 'getChatContacts']);
+    Route::put('/chat/message/{messageId}', [ChatController::class, 'editMessage']);
+    Route::delete('/chat/message/{messageId}', [ChatController::class, 'deleteSingleChat']);
+    Route::delete('/chat/{userId}', [ChatController::class, 'deleteChatWithUser']);
 
-    
+    //group chat
+    Route::post('/chat/group', [GroupChatController::class, 'createGroup']);
+    Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
+    Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
+    Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
+    Route::put('/groups/{groupId}', [GroupChatController::class, 'editGroup']);
+    Route::delete('/groups/{groupId}', [GroupChatController::class, 'deleteGroup']);
+    Route::post('/groups/{groupId}/members', [GroupChatController::class, 'addMember']);
+    Route::delete('/groups/{groupId}/members', [GroupChatController::class, 'removeMember']);
+
+    //broadcast chat
+    Route::post('/chat/broadcast/create', [BroadcastController::class, 'createBroadcast']); // Menyimpan daftar penerima
+    Route::get('/chat/broadcast/list', [BroadcastController::class, 'getCreatedBroadcasts']);
+    Route::post('/chat/broadcast', [BroadcastController::class, 'sendBroadcastMessage']);
+    Route::get('/chat/broadcast/{broadcast_id}', [BroadcastController::class, 'getBroadcastMessages']);
+});
+
+
+
+Route::post('/register', [AuthAuthController::class, 'register']);
+Route::post('/login', [AuthAuthController::class, 'login']);
+Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
+Route::put('/update-image-group/{id}', [ImageController::class, 'updateGroupImg']);
+
+Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
+Route::put('/users/{id}', [UserController::class, 'update']);
+
+
 /**
 //  * route "/register"==
 //  * @method "POST"

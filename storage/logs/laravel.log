@@ -4506,3 +4506,7 @@ Did you mean one of these?
 #67 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
 #68 {main}
 "} 
+[2025-02-28 11:04:29] local.ERROR: Cannot redeclare App\Models\User::sentMessages() {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare App\\Models\\User::sentMessages() at C:\\laragon\\www\\b-end\\sent_backend\\app\\Models\\User.php:95)
+[stacktrace]
+#0 {main}
+"} 
