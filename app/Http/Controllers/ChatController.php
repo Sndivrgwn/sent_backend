@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MessageDeleted;
+use App\Events\MessageRead;
 use App\Events\MessageSent;
+use App\Events\MessageUpdated;
 use App\Models\ChatMessage;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class ChatController extends Controller
 {
@@ -84,7 +88,6 @@ class ChatController extends Controller
 
         $currentUserId = Auth::id();
 
-        // Cari pesan berdasarkan ID dan pastikan hanya bisa dihapus oleh pengirim atau penerima
         $chatMessage = ChatMessage::where('id', $messageId)
             ->where(function ($query) use ($currentUserId) {
                 $query->where('sender_id', $currentUserId)
@@ -96,10 +99,15 @@ class ChatController extends Controller
             return response()->json(['error' => 'Message not found or unauthorized'], 404);
         }
 
+        $receiverId = $chatMessage->receiver_id;
+
         $chatMessage->delete();
+
+        event(new MessageDeleted($messageId, $receiverId));
 
         return response()->json(['message' => 'Chat message deleted successfully']);
     }
+
 
     public function deleteChatWithUser($userId)
     {
@@ -154,24 +162,41 @@ class ChatController extends Controller
         return response()->json($contacts);
     }
 
-    public function markAsRead(Request $request)
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
 
-        $validatedData = $request->validate([
-            'receiver_id' => 'required|exists:users,id',
-        ]);
-
-        ChatMessage::where('receiver_id', Auth::id())
-            ->where('sender_id', $validatedData['receiver_id'])
-            ->update(['is_read' => true]);
-
-        return response()->json(['status' => 'Messages marked as read']);
+public function markAsRead(Request $request)
+{
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthorized'], 401);
     }
 
-   
+    $validatedData = $request->validate([
+        'receiver_id' => 'required|exists:users,id',
+    ]);
+
+    // Debug: Cek apakah ada pesan yang belum dibaca
+    $messages = ChatMessage::where('receiver_id', Auth::id())
+        ->where('sender_id', $validatedData['receiver_id'])
+        ->where('is_read', false)
+        ->get();
+
+    Log::info("Pesan yang akan ditandai sebagai read:", $messages->toArray()); // Tambahkan log
+
+    if ($messages->isEmpty()) {
+        return response()->json(['status' => 'No messages to update']);
+    }
+
+    // Update status pesan menjadi is_read = true
+    ChatMessage::whereIn('id', $messages->pluck('id'))->update(['is_read' => true]);
+
+    // Kirim event dengan semua message_id yang telah diupdate
+    event(new MessageRead(Auth::id(), $validatedData['receiver_id'], $messages->pluck('id')->toArray()));
+
+    return response()->json(['status' => 'Messages marked as read']);
+}
+
+
+
+
 
     public function editMessage(Request $request, $messageId)
     {
@@ -185,7 +210,6 @@ class ChatController extends Controller
 
         $currentUserId = Auth::id();
 
-        // Cari pesan berdasarkan ID dan pastikan hanya bisa diedit oleh pengirim
         $chatMessage = ChatMessage::where('id', $messageId)
             ->where('sender_id', $currentUserId)
             ->first();
@@ -194,9 +218,10 @@ class ChatController extends Controller
             return response()->json(['error' => 'Message not found or unauthorized'], 404);
         }
 
-        // Update teks pesan
         $chatMessage->message_text = $validatedData['message_text'];
         $chatMessage->save();
+
+        event(new MessageUpdated($chatMessage));
 
         return response()->json(['message' => 'Chat message updated successfully', 'updated_message' => $chatMessage]);
     }
