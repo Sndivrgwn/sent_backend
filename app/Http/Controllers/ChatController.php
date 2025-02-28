@@ -72,6 +72,7 @@ class ChatController extends Controller
                 'sender_name' => $message->sender->name,
                 'receiver_id' => $message->receiver->id,
                 'receiver_name' => $message->receiver->name,
+                'email' => $message->receiver->email,
                 'message_text' => $message->message_text,
                 'time' => $createdAtInJakarta->format('H:i'),
                 'date' => $createdAtInJakarta->format('Y-m-d, D'),
