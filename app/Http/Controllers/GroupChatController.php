@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class GroupChatController extends Controller
 {
@@ -192,44 +193,103 @@ class GroupChatController extends Controller
         return response()->json($groupContacts);
     }
 
-    public function editGroup(Request $request, $groupId)
+    public function getGroupById($id)
     {
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        $validatedData = $request->validate([
-            'name' => 'nullable|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+        $currentUserId = Auth::id();
 
-        $group = ChatGroup::findOrFail($groupId);
+        // Cari grup berdasarkan ID dan pastikan user yang login adalah anggota
+        $group = ChatGroup::where('id', $id)
+            ->whereHas('members', function ($query) use ($currentUserId) {
+                $query->where('user_id', $currentUserId);
+            })->first();
 
-        // Cek apakah user yang mengedit adalah pembuat grup
-        if ($group->created_by !== Auth::id()) {
-            return response()->json(['error' => 'You are not authorized to edit this group'], 403);
+        if (!$group) {
+            return response()->json(['error' => 'Group not found or access denied'], 404);
         }
 
-        // Update nama grup jika ada
-        if (isset($validatedData['name'])) {
-            $group->name = $validatedData['name'];
-        }
+        // Ambil pesan terakhir dalam grup
+        $lastMessage = ChatMessage::where('group_id', $group->id)
+            ->latest()
+            ->first();
 
-        // Update gambar grup jika ada
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = time() . '_' . $image->getClientOriginalName();
-            $imagePath = $image->storeAs('group_images/', $imageName, 'public');
-            $group->img = $imagePath;
-        }
+        // Ambil anggota grup dengan join ke tabel users
+        $members = ChatGroupMember::where('group_id', $group->id)
+            ->join('users', 'chat_group_members.user_id', '=', 'users.id')
+            ->select(
+                'users.id',
+                'users.name',
+                'users.divisi',
+                'users.email',
+                DB::raw('CONCAT("' . asset('storage/') . '", "/", REPLACE(users.img, "storage/", "")) as img'),
+                'users.kelas'
+            )
+            ->get();
 
-        $group->save();
+        $groupData = [
+            'group_id' => $group->id,
+            'img' => asset('storage/' . $group->img),
+            'name' => $group->name,
+            'description' => $group->description,
+            'last_message' => $lastMessage ? $lastMessage->message_text : null,
+            'last_message_time' => $lastMessage ? $lastMessage->created_at->diffForHumans() : 'Never',
+            'members' => $members,
+        ];
 
-        return response()->json([
-            'message' => 'Group updated successfully',
-            'group' => $group,
-        ]);
+        return response()->json($groupData);
     }
+
+
+    public function editGroup(Request $request, $groupId)
+{
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthorized'], 401);
+    }
+
+    $validatedData = $request->validate([
+        'name' => 'nullable|string|max:255',
+        'description' => 'nullable|string', // Tambahkan validasi untuk description
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
+    $group = ChatGroup::findOrFail($groupId);
+
+    // Cek apakah user yang mengedit adalah pembuat grup
+    if ($group->created_by !== Auth::id()) {
+        return response()->json(['error' => 'You are not authorized to edit this group'], 403);
+    }
+
+    // Update nama grup jika ada
+    if (isset($validatedData['name'])) {
+        $group->name = $validatedData['name'];
+    }
+
+    // Update deskripsi grup jika ada
+    if (isset($validatedData['description'])) {
+        $group->description = $validatedData['description'];
+    }
+
+    // Update gambar grup jika ada
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
+        $imageName = time() . '_' . $image->getClientOriginalName();
+        $imagePath = $image->storeAs('group_images', $imageName, 'public');
+        $group->img = 'group_images/' . $imageName; // Simpan path relatif
+    }
+
+    $group->save();
+
+    // Generate URL lengkap menggunakan asset()
+    $group->img = asset('storage/' . $group->img);
+
+    return response()->json([
+        'message' => 'Group updated successfully',
+        'group' => $group,
+    ]);
+}
 
     public function deleteGroup($groupId)
     {

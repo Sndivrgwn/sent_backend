@@ -14,6 +14,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Broadcast;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Pusher\Pusher;
 
@@ -28,7 +29,9 @@ use Pusher\Pusher;
 |
 */
 
-Broadcast::routes(['middleware' => ['auth:sanctum']]);
+Route::middleware(['auth:sanctum'])->group(function () {
+    Broadcast::routes();
+});
 
 
 // Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
@@ -55,6 +58,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/chat/group', [GroupChatController::class, 'createGroup']);
     Route::post('/chat/group/message', [GroupChatController::class, 'sendGroupMessage']);
     Route::get('/chat/group/{groupId}', [GroupChatController::class, 'getGroupMessages']);
+    Route::get('/chat/group/data/{groupId}', [GroupChatController::class, 'getGroupById']);
     Route::get('/group-contacts', [GroupChatController::class, 'getGroupContacts']);
     Route::put('/groups/{groupId}', [GroupChatController::class, 'editGroup']);
     Route::delete('/groups/{groupId}', [GroupChatController::class, 'deleteGroup']);
@@ -107,6 +111,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
     return response()->json($user);
 });
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::post('/user', function (Request $request) {
+        return $request->user();
+    });
+});
+
 
 
 

@@ -1,7 +1,9 @@
 <?php
 
 use App\Models\ChatGroupMember;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Broadcast;
+use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,25 @@ Broadcast::channel('group-chat.{group_id}', function ($user, $group_id) {
         ->where('user_id', $user->id)
         ->exists();
 });
+
+Broadcast::channel('private-chat-channel.{userId}', function ($user, $userId) {
+    Log::info("🔍 User mencoba subscribe:", [
+        'user' => $user->id ?? 'Guest',
+        'channel_userId' => $userId
+    ]);
+
+    return (int) $user->id === (int) $userId;
+}, ['guards' => ['api']]); // 🔥 Pastikan hanya menggunakan guard API
+
+
+
+
+
+
+
+
+
+
+
+
+

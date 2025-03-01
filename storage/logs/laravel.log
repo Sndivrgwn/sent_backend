@@ -4510,3 +4510,787 @@ Did you mean one of these?
 [stacktrace]
 #0 {main}
 "} 
+[2025-02-28 11:10:59] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:10:59] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:12] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:19] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:22] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:26] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:30] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:32] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:11:33] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:13:14] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:13:14] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:14:54] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:14:55] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:15:38] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":241,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"tes broadcast","is_read":0,"created_at":"2025-02-28T11:13:49.000000Z","updated_at":"2025-02-28T11:13:49.000000Z","is_broadcast":1}] 
+[2025-02-28 11:15:40] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:26:37] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:26:39] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":243,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"tes broadcast","is_read":0,"created_at":"2025-02-28T11:13:49.000000Z","updated_at":"2025-02-28T11:13:49.000000Z","is_broadcast":1},{"id":245,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"gajadi","is_read":0,"created_at":"2025-02-28T11:14:57.000000Z","updated_at":"2025-02-28T11:16:54.000000Z","is_broadcast":0},{"id":246,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"hahahaha","is_read":0,"created_at":"2025-02-28T11:17:08.000000Z","updated_at":"2025-02-28T11:17:08.000000Z","is_broadcast":0}] 
+[2025-02-28 11:26:43] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:28:28] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:28:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:28:33] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:30] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:34] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":22,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":4,"message_text":"halo wa","is_read":0,"created_at":"2025-02-26T12:58:48.000000Z","updated_at":"2025-02-26T12:58:48.000000Z","is_broadcast":0}] 
+[2025-02-28 11:30:38] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:39] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:40] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:41] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:30:43] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":247,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"cok","is_read":0,"created_at":"2025-02-28T11:30:41.000000Z","updated_at":"2025-02-28T11:30:41.000000Z","is_broadcast":0}] 
+[2025-02-28 11:33:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:33:36] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:33:37] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:33:41] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:35:28] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:36:24] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:36:25] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:36:26] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:36:26] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":248,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"hay ganteng","is_read":0,"created_at":"2025-02-28T11:35:35.000000Z","updated_at":"2025-02-28T11:35:35.000000Z","is_broadcast":0}] 
+[2025-02-28 11:39:02] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":249,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"halo fantenf","is_read":0,"created_at":"2025-02-28T11:36:29.000000Z","updated_at":"2025-02-28T11:36:29.000000Z","is_broadcast":0}] 
+[2025-02-28 11:39:05] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:39:06] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:39:40] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:39:41] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":250,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"aaaa","is_read":0,"created_at":"2025-02-28T11:39:10.000000Z","updated_at":"2025-02-28T11:39:10.000000Z","is_broadcast":0}] 
+[2025-02-28 11:39:44] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:39:46] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:39:47] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:42:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:42:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:24] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:36] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:43:36] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":251,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"yok ah","is_read":0,"created_at":"2025-02-28T11:43:32.000000Z","updated_at":"2025-02-28T11:43:32.000000Z","is_broadcast":0}] 
+[2025-02-28 11:46:30] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:46:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:47:56] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:04] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:05] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:10] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:11] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:12] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:17] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:18] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:48:18] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:52:39] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:52:41] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":252,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"tes nikh","is_read":0,"created_at":"2025-02-28T11:49:28.000000Z","updated_at":"2025-02-28T11:49:28.000000Z","is_broadcast":0}] 
+[2025-02-28 11:52:43] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:52:44] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:52:45] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:54:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:54:28] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 11:54:39] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":253,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"tsss","is_read":0,"created_at":"2025-02-28T11:54:08.000000Z","updated_at":"2025-02-28T11:54:08.000000Z","is_broadcast":0}] 
+[2025-02-28 11:54:42] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:16] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:19] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:20] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:21] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:46] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:50] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:55] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:10:56] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:13:48] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:13:49] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":255,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"fdsfds","is_read":0,"created_at":"2025-02-28T12:10:57.000000Z","updated_at":"2025-02-28T12:10:57.000000Z","is_broadcast":0}] 
+[2025-02-28 12:13:54] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":254,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"hhh\\","is_read":0,"created_at":"2025-02-28T12:10:28.000000Z","updated_at":"2025-02-28T12:10:28.000000Z","is_broadcast":0}] 
+[2025-02-28 12:22:06] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":256,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"aaaaa","is_read":0,"created_at":"2025-02-28T12:18:25.000000Z","updated_at":"2025-02-28T12:18:25.000000Z","is_broadcast":0}] 
+[2025-02-28 12:22:11] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:22:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:22:17] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:26:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:26:35] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":257,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":4,"message_text":"aaa","is_read":0,"created_at":"2025-02-28T12:26:32.000000Z","updated_at":"2025-02-28T12:26:32.000000Z","is_broadcast":0}] 
+[2025-02-28 12:26:38] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-02-28 12:26:40] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:19:10] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:19:13] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:19:28] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 02:19:29] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 02:19:33] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 02:19:34] local.INFO: Mengirim event GroupMessage untuk grup ID: 1  
+[2025-03-01 02:19:39] local.INFO: Event berhasil dikirim  
+[2025-03-01 02:19:39] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 02:20:24] local.INFO: Mengirim event GroupMessage untuk grup ID: 1  
+[2025-03-01 02:20:26] local.INFO: Event berhasil dikirim  
+[2025-03-01 02:20:27] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 02:34:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:34:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:35:13] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:35:40] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:36:33] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 02:36:35] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:08:06] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:08:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:13:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:14:03] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:14:13] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:16:30] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:19:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:19:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:19:37] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:21:18] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:22:22] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:22:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:22:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:22:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:23:31] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":260,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"halo","is_read":0,"created_at":"2025-03-01T03:08:13.000000Z","updated_at":"2025-03-01T03:08:13.000000Z","is_broadcast":0},{"id":261,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"aaa","is_read":0,"created_at":"2025-03-01T03:09:50.000000Z","updated_at":"2025-03-01T03:09:50.000000Z","is_broadcast":0},{"id":262,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"halo","is_read":0,"created_at":"2025-03-01T03:13:29.000000Z","updated_at":"2025-03-01T03:13:29.000000Z","is_broadcast":0},{"id":263,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"aaa","is_read":0,"created_at":"2025-03-01T03:14:27.000000Z","updated_at":"2025-03-01T03:14:27.000000Z","is_broadcast":0},{"id":264,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"ya","is_read":0,"created_at":"2025-03-01T03:22:30.000000Z","updated_at":"2025-03-01T03:22:30.000000Z","is_broadcast":0}] 
+[2025-03-01 03:23:35] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:27:18] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:27:25] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:27:31] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:27:34] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:28:03] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:28:05] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:28:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:28:23] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:28:24] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:34:06] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:34:08] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:35:42] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:35:44] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:36:43] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":265,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"aaaaa","is_read":0,"created_at":"2025-03-01T03:36:04.000000Z","updated_at":"2025-03-01T03:36:04.000000Z","is_broadcast":0}] 
+[2025-03-01 03:36:47] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:37:44] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":266,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"yok","is_read":0,"created_at":"2025-03-01T03:36:48.000000Z","updated_at":"2025-03-01T03:36:48.000000Z","is_broadcast":0}] 
+[2025-03-01 03:37:48] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:38:10] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:38:11] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:42:11] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:42:12] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:44:03] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:44:04] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:44:59] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:45:42] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:45:47] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:45:49] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:45:50] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:45:55] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:47:55] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:47:59] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:48:03] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:48:06] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:48:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:49:44] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:49:48] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:50:13] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:50:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:50:19] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:50:21] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:50:22] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:50:54] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:51:40] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:52:16] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:52:22] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:54:33] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:56:26] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":2,"name":"fahri","role":"user","email":"fahri@mail.com","img":"user_images/2/vCxgsnEFAH9vaYRGW6WPIsJlOef5dLkCTQAazIQc.jpg","kelas":"XI TJKT 3","divisi":"Multimedia","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:30:41.000000Z","updated_at":"2025-02-26T04:45:00.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:56:30] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":2,"name":"fahri","role":"user","email":"fahri@mail.com","img":"user_images/2/vCxgsnEFAH9vaYRGW6WPIsJlOef5dLkCTQAazIQc.jpg","kelas":"XI TJKT 3","divisi":"Multimedia","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:30:41.000000Z","updated_at":"2025-02-26T04:45:00.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:56:32] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:56:42] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:56:46] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:56:48] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:57:15] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:57:16] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:57:19] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:57:21] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:57:48] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":2,"name":"fahri","role":"user","email":"fahri@mail.com","img":"user_images/2/vCxgsnEFAH9vaYRGW6WPIsJlOef5dLkCTQAazIQc.jpg","kelas":"XI TJKT 3","divisi":"Multimedia","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:30:41.000000Z","updated_at":"2025-02-26T04:45:00.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:57:50] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":2,"name":"fahri","role":"user","email":"fahri@mail.com","img":"user_images/2/vCxgsnEFAH9vaYRGW6WPIsJlOef5dLkCTQAazIQc.jpg","kelas":"XI TJKT 3","divisi":"Multimedia","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:30:41.000000Z","updated_at":"2025-02-26T04:45:00.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 03:57:53] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 03:57:54] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:03:57] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:05:48] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:05:49] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:07:40] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 04:07:41] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 04:07:44] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:07:44] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:09:11] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 04:09:11] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:09:11] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 04:09:11] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:09:14] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 04:09:14] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:09:16] local.INFO: 🔐 User authenticated:  [{"App\\Models\\User":{"id":1,"name":"nun","role":"user","email":"nun@mail.com","img":"user_images/1/TupZFEqtrmpDdCjKqpZuyxpIwFcvtdwuvHntkgVD.jpg","kelas":"XII TJKT 1","divisi":"Programming","no_hp":null,"email_verified_at":null,"created_at":"2025-02-26T03:18:59.000000Z","updated_at":"2025-02-26T03:44:22.000000Z","avatar":null,"status":null,"last_online":null}}] 
+[2025-03-01 04:09:16] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:12:59] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:13:00] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:13:10] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:13:11] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:13:13] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:13:16] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 04:17:04] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:17:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:21:13] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:21:38] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":267,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"aaaaaa","is_read":0,"created_at":"2025-03-01T04:17:05.000000Z","updated_at":"2025-03-01T04:17:05.000000Z","is_broadcast":0},{"id":268,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"eeeeee","is_read":0,"created_at":"2025-03-01T04:21:06.000000Z","updated_at":"2025-03-01T04:21:06.000000Z","is_broadcast":0}] 
+[2025-03-01 04:21:41] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:24:14] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":269,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"aaaa","is_read":0,"created_at":"2025-03-01T04:22:07.000000Z","updated_at":"2025-03-01T04:22:07.000000Z","is_broadcast":0}] 
+[2025-03-01 04:24:20] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:52:33] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":270,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"uuuuju","is_read":0,"created_at":"2025-03-01T04:47:54.000000Z","updated_at":"2025-03-01T04:47:54.000000Z","is_broadcast":0}] 
+[2025-03-01 04:52:46] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:52:56] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:53:17] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:53:19] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:53:20] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:53:21] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:54:05] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:54:07] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:54:33] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":271,"broadcast_id":null,"group_id":null,"sender_id":1,"receiver_id":2,"message_text":"woi","is_read":0,"created_at":"2025-03-01T04:54:14.000000Z","updated_at":"2025-03-01T04:54:14.000000Z","is_broadcast":0}] 
+[2025-03-01 04:54:37] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:56:05] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":272,"broadcast_id":null,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"apa woi","is_read":0,"created_at":"2025-03-01T04:54:51.000000Z","updated_at":"2025-03-01T04:54:51.000000Z","is_broadcast":0}] 
+[2025-03-01 04:56:08] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 04:58:49] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":273,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"woi","is_read":0,"created_at":"2025-03-01T04:56:10.000000Z","updated_at":"2025-03-01T04:56:10.000000Z","is_broadcast":1}] 
+[2025-03-01 04:58:53] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:11:22] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":277,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"hihi","is_read":0,"created_at":"2025-03-01T04:59:07.000000Z","updated_at":"2025-03-01T04:59:07.000000Z","is_broadcast":1},{"id":281,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"aaa","is_read":0,"created_at":"2025-03-01T05:03:26.000000Z","updated_at":"2025-03-01T05:03:26.000000Z","is_broadcast":1},{"id":285,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"woi penonton","is_read":0,"created_at":"2025-03-01T05:08:44.000000Z","updated_at":"2025-03-01T05:08:44.000000Z","is_broadcast":1},{"id":289,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"mana ini","is_read":0,"created_at":"2025-03-01T05:09:13.000000Z","updated_at":"2025-03-01T05:09:13.000000Z","is_broadcast":1},{"id":293,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"kkk","is_read":0,"created_at":"2025-03-01T05:10:02.000000Z","updated_at":"2025-03-01T05:10:02.000000Z","is_broadcast":1}] 
+[2025-03-01 05:11:25] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:17:40] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":297,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"yo","is_read":0,"created_at":"2025-03-01T05:11:26.000000Z","updated_at":"2025-03-01T05:11:26.000000Z","is_broadcast":1},{"id":301,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"aaa","is_read":0,"created_at":"2025-03-01T05:14:15.000000Z","updated_at":"2025-03-01T05:14:15.000000Z","is_broadcast":1}] 
+[2025-03-01 05:17:45] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:17:47] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:19:09] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":305,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"klklkllkllll","is_read":0,"created_at":"2025-03-01T05:17:48.000000Z","updated_at":"2025-03-01T05:17:48.000000Z","is_broadcast":1}] 
+[2025-03-01 05:19:14] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:19:18] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":309,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"kkkkkocak","is_read":0,"created_at":"2025-03-01T05:19:15.000000Z","updated_at":"2025-03-01T05:19:15.000000Z","is_broadcast":1}] 
+[2025-03-01 05:22:14] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:22:18] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:22:26] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:22:49] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:22:51] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:23:15] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":313,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"sasasasa","is_read":0,"created_at":"2025-03-01T05:22:51.000000Z","updated_at":"2025-03-01T05:22:51.000000Z","is_broadcast":1}] 
+[2025-03-01 05:23:24] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:26:26] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:26:27] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 05:27:30] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":317,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"l;'l","is_read":0,"created_at":"2025-03-01T05:26:31.000000Z","updated_at":"2025-03-01T05:26:31.000000Z","is_broadcast":1}] 
+[2025-03-01 05:30:26] local.INFO: Pesan yang akan ditandai sebagai read: [{"id":321,"broadcast_id":2,"group_id":null,"sender_id":2,"receiver_id":1,"message_text":"asasa","is_read":0,"created_at":"2025-03-01T05:27:45.000000Z","updated_at":"2025-03-01T05:27:45.000000Z","is_broadcast":1}] 
+[2025-03-01 05:30:29] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 07:26:50] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 07:26:51] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-01 07:27:22] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:27:23] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:27:33] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:27:35] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:41:36] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:41:40] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:41:41] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:41:42] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:44:30] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:44:37] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:44:40] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 07:44:44] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:07:06] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:07:07] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:07:12] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:07:12] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:07:57] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:07:58] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:08:12] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:08:16] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:27] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:34] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:35] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:38] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:39] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:41] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:42] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:44] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:46] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:48] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:50] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:54] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:56] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:58] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:58] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:22:59] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:23:33] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:23:35] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:23:41] local.ERROR: Method App\Http\Controllers\GroupChatController::getGroupById does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\GroupChatController::getGroupById does not exist. at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getGroupById', Array)
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getGroupById', Array)
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'getGroupById')
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(165): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#58 {main}
+"} 
+[2025-03-01 08:23:52] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:23:59] local.ERROR: Method App\Http\Controllers\GroupChatController::getGroupById does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\GroupChatController::getGroupById does not exist. at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getGroupById', Array)
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getGroupById', Array)
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'getGroupById')
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(165): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#58 {main}
+"} 
+[2025-03-01 08:24:07] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:27:00] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' (Connection: mysql, SQL: update `chat_groups` set `name` = wow, `description` = 1111, `chat_groups`.`updated_at` = 2025-03-01 08:26:59 where `id` = 1) {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' (Connection: mysql, SQL: update `chat_groups` set `name` = wow, `description` = 1111, `chat_groups`.`updated_at` = 2025-03-01 08:26:59 where `id` = 1) at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('update `chat_gr...', Array, Object(Closure))
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(600): Illuminate\\Database\\Connection->run('update `chat_gr...', Array, Object(Closure))
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(552): Illuminate\\Database\\Connection->affectingStatement('update `chat_gr...', Array)
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3602): Illuminate\\Database\\Connection->update('update `chat_gr...', Array)
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1061): Illuminate\\Database\\Query\\Builder->update(Array)
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1214): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1131): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#7 C:\\laragon\\www\\b-end\\sent_backend\\app\\Http\\Controllers\\GroupChatController.php(236): Illuminate\\Database\\Eloquent\\Model->save()
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\GroupChatController->editGroup(Object(Illuminate\\Http\\Request), '1')
+#9 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('editGroup', Array)
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'editGroup')
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#55 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'description' in 'field list' at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:608)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(608): PDO->prepare('update `chat_gr...')
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('update `chat_gr...', Array)
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('update `chat_gr...', Array, Object(Closure))
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(600): Illuminate\\Database\\Connection->run('update `chat_gr...', Array, Object(Closure))
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(552): Illuminate\\Database\\Connection->affectingStatement('update `chat_gr...', Array)
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3602): Illuminate\\Database\\Connection->update('update `chat_gr...', Array)
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1061): Illuminate\\Database\\Query\\Builder->update(Array)
+#7 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1214): Illuminate\\Database\\Eloquent\\Builder->update(Array)
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1131): Illuminate\\Database\\Eloquent\\Model->performUpdate(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 C:\\laragon\\www\\b-end\\sent_backend\\app\\Http\\Controllers\\GroupChatController.php(236): Illuminate\\Database\\Eloquent\\Model->save()
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\GroupChatController->editGroup(Object(Illuminate\\Http\\Request), '1')
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('editGroup', Array)
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'editGroup')
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#54 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#55 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#57 {main}
+"} 
+[2025-03-01 08:34:30] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:34:31] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:34:33] local.ERROR: Method App\Http\Controllers\GroupChatController::getGroupById does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\GroupChatController::getGroupById does not exist. at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getGroupById', Array)
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getGroupById', Array)
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'getGroupById')
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(165): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#58 {main}
+"} 
+[2025-03-01 08:34:35] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:34:36] local.ERROR: Method App\Http\Controllers\GroupChatController::getGroupById does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\GroupChatController::getGroupById does not exist. at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getGroupById', Array)
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getGroupById', Array)
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'getGroupById')
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(61): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(165): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#55 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#56 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#57 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#58 {main}
+"} 
+[2025-03-01 08:34:39] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:35:09] local.ERROR: Method App\Http\Controllers\GroupChatController::getGroupById does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method App\\Http\\Controllers\\GroupChatController::getGroupById does not exist. at C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php:68)
+[stacktrace]
+#0 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): Illuminate\\Routing\\Controller->__call('getGroupById', Array)
+#1 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction('getGroupById', Array)
+#2 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\GroupChatController), 'getGroupById')
+#3 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
+#4 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(806): Illuminate\\Routing\\Route->run()
+#5 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#6 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#7 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#10 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#11 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest(Object(Illuminate\\Http\\Request), Object(Closure), Array)
+#12 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate\\Http\\Request), Object(Closure), 'api', Object(Closure))
+#13 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'api')
+#14 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#15 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure), 'sanctum')
+#16 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#17 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}(Object(Illuminate\\Http\\Request))
+#18 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#20 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(805): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#23 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(784): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#24 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(748): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#25 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(737): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#26 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#27 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(144): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(99): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(183): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(119): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 C:\\laragon\\www\\b-end\\sent_backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 C:\\laragon\\www\\b-end\\sent_backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\laragon\\\\www\\\\...')
+#47 {main}
+"} 
+[2025-03-01 08:36:06] local.ERROR: Cannot redeclare App\Http\Controllers\GroupChatController::deleteGroup() {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare App\\Http\\Controllers\\GroupChatController::deleteGroup() at C:\\laragon\\www\\b-end\\sent_backend\\app\\Http\\Controllers\\GroupChatController.php:321)
+[stacktrace]
+#0 {main}
+"} 
+[2025-03-01 08:36:58] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:36:59] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:37:03] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:37:03] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:41:55] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:41:56] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:41:58] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:42:00] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:51:16] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:52:50] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:52:51] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:52:52] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 08:52:53] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:01:39] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:01:39] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:01:42] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:01:45] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:02:25] local.INFO: Mengirim event GroupMessage untuk grup ID: 1  
+[2025-03-01 09:02:27] local.INFO: Event berhasil dikirim  
+[2025-03-01 09:02:28] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:17:47] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"3"} 
+[2025-03-01 09:17:48] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"3"} 
+[2025-03-01 09:17:51] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"3"} 
+[2025-03-01 09:17:53] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"3"} 
+[2025-03-01 09:22:30] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:22:31] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:22:33] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:22:35] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:22:35] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:23:48] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:23:50] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:23:54] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:23:56] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"4"} 
+[2025-03-01 09:24:23] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:24:24] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:24:28] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:24:30] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:25:16] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:25:16] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:25:19] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:25:20] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:26:30] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:26:31] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:26:34] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:26:37] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"2"} 
+[2025-03-01 09:26:58] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:26:59] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:27:06] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:27:09] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:41:26] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:41:26] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:41:27] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:41:29] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:43:22] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:43:22] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:43:26] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:43:31] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:44:17] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:44:17] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:44:20] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-01 09:44:21] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
