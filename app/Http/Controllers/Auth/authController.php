@@ -38,6 +38,15 @@ class authController extends Controller
         // Cari grup berdasarkan divisi
         $group = ChatGroup::where('name', $request->divisi)->first();
 
+        // if (!$group) {
+        //     // Buat grup baru jika belum ada
+        //     $group = ChatGroup::create([
+        //         'name' => $request->divisi,
+        //         'created_by' => $user->id, // Atau ID admin
+        //         'img' => 'default_group_image.png', // Path gambar default
+        //     ]);
+        // }
+
         if ($group) {
             // Tambahkan user ke grup
             ChatGroupMember::create([
