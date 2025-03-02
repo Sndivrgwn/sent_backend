@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\ChatGroup;
+use App\Models\ChatGroupMember;
 use App\Models\User;
 use Dotenv\Validator;
 use Illuminate\Http\Request;
@@ -16,8 +18,8 @@ class authController extends Controller
         $validator = FacadesValidator::make($request->all(), [
             'name'      => 'required',
             'email'     => 'required|email|unique:users',
-            'kelas' => 'min:2',
-            'divisi' => 'alpha:ascii',
+            'kelas'     => 'min:2',
+            'divisi'    => 'alpha:ascii',
             'password'  => 'required|min:8|confirmed'
         ]);
 
@@ -29,11 +31,22 @@ class authController extends Controller
             'name'      => $request->name,
             'email'     => $request->email,
             'kelas'     => $request->kelas,
-            'divisi'    => $request->divisi, 
+            'divisi'    => $request->divisi,
             'password'  => bcrypt($request->password)
         ]);
 
-        return response()->json(['message' => 'User  registered successfully!', 'user' => $user], 201);
+        // Cari grup berdasarkan divisi
+        $group = ChatGroup::where('name', $request->divisi)->first();
+
+        if ($group) {
+            // Tambahkan user ke grup
+            ChatGroupMember::create([
+                'group_id' => $group->id,
+                'user_id' => $user->id,
+            ]);
+        }
+
+        return response()->json(['message' => 'User registered successfully!', 'user' => $user], 201);
     }
 
     // Login pengguna

@@ -22,22 +22,6 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('password'),
                 'role' => 'admin',
             ],
-
-            //agent
-            [
-                'name' =>  'Agent',
-                'email' => 'agent@gmail.com',
-                'password' => Hash::make('password'),
-                'role' => 'superadmin',
-            ],
-
-            //user
-            [
-                'name' =>  'User',
-                'email' => 'user@gmail.com',
-                'password' => Hash::make('password'),
-                'role' => 'user',
-            ]
         ]);
     }
 }

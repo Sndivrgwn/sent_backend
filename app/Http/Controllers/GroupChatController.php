@@ -6,6 +6,7 @@ use App\Events\GroupMessage;
 use App\Models\ChatGroup;
 use App\Models\ChatGroupMember;
 use App\Models\ChatMessage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -194,53 +195,66 @@ class GroupChatController extends Controller
     }
 
     public function getGroupById($id)
-    {
-        if (!Auth::check()) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        $currentUserId = Auth::id();
-
-        // Cari grup berdasarkan ID dan pastikan user yang login adalah anggota
-        $group = ChatGroup::where('id', $id)
-            ->whereHas('members', function ($query) use ($currentUserId) {
-                $query->where('user_id', $currentUserId);
-            })->first();
-
-        if (!$group) {
-            return response()->json(['error' => 'Group not found or access denied'], 404);
-        }
-
-        // Ambil pesan terakhir dalam grup
-        $lastMessage = ChatMessage::where('group_id', $group->id)
-            ->latest()
-            ->first();
-
-        // Ambil anggota grup dengan join ke tabel users
-        $members = ChatGroupMember::where('group_id', $group->id)
-            ->join('users', 'chat_group_members.user_id', '=', 'users.id')
-            ->select(
-                'users.id',
-                'users.name',
-                'users.divisi',
-                'users.email',
-                DB::raw('CONCAT("' . asset('storage/') . '", "/", REPLACE(users.img, "storage/", "")) as img'),
-                'users.kelas'
-            )
-            ->get();
-
-        $groupData = [
-            'group_id' => $group->id,
-            'img' => asset('storage/' . $group->img),
-            'name' => $group->name,
-            'description' => $group->description,
-            'last_message' => $lastMessage ? $lastMessage->message_text : null,
-            'last_message_time' => $lastMessage ? $lastMessage->created_at->diffForHumans() : 'Never',
-            'members' => $members,
-        ];
-
-        return response()->json($groupData);
+{
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthorized'], 401);
     }
+
+    $currentUserId = Auth::id();
+
+    // Cari grup berdasarkan ID dan pastikan user yang login adalah anggota
+    $group = ChatGroup::where('id', $id)
+        ->whereHas('members', function ($query) use ($currentUserId) {
+            $query->where('user_id', $currentUserId);
+        })->first();
+
+    if (!$group) {
+        return response()->json(['error' => 'Group not found or access denied'], 404);
+    }
+
+    // Ambil pesan terakhir dalam grup
+    $lastMessage = ChatMessage::where('group_id', $group->id)
+        ->latest()
+        ->first();
+
+    // Ambil anggota grup dengan join ke tabel users
+    $members = ChatGroupMember::where('group_id', $group->id)
+        ->join('users', 'chat_group_members.user_id', '=', 'users.id')
+        ->select(
+            'users.id',
+            'users.name',
+            'users.divisi',
+            'users.email',
+            DB::raw('CONCAT("' . asset('storage/') . '", "/", REPLACE(users.img, "storage/", "")) as img'),
+            'users.kelas'
+        )
+        ->get();
+
+    // Format created_at ke tanggal/bulan/tahun jam:menit
+    $createdAtFormatted = $group->created_at->format('d/m/Y H:i');
+
+    // Ambil informasi owner (pembuat grup)
+    $owner = $group->creator;
+
+    $groupData = [
+        'group_id' => $group->id,
+        'img' => asset('storage/' . $group->img),
+        'name' => $group->name,
+        'description' => $group->description,
+        'created_at' => $createdAtFormatted,
+        'owner' => [
+            'id' => $owner->id,
+            'name' => $owner->name,
+            'email' => $owner->email,
+            'img' => asset('storage/' . $owner->img),
+        ],
+        'last_message' => $lastMessage ? $lastMessage->message_text : null,
+        'last_message_time' => $lastMessage ? $lastMessage->created_at->diffForHumans() : 'Never',
+        'members' => $members,
+    ];
+
+    return response()->json($groupData);
+}
 
 
     public function editGroup(Request $request, $groupId)
@@ -323,35 +337,39 @@ class GroupChatController extends Controller
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
-
+    
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:users,id',
         ]);
-
+    
         $group = ChatGroup::findOrFail($groupId);
-
+    
         // Cek apakah user yang menambahkan member adalah pembuat grup
         if ($group->created_by !== Auth::id()) {
             return response()->json(['error' => 'You are not authorized to add members to this group'], 403);
         }
-
+    
         // Cek apakah user sudah menjadi member
         $isMember = ChatGroupMember::where('group_id', $groupId)
             ->where('user_id', $validatedData['user_id'])
             ->exists();
-
+    
         if ($isMember) {
             return response()->json(['error' => 'User is already a member of this group'], 400);
         }
-
+    
+        // Ambil data user yang akan ditambahkan
+        $user = User::findOrFail($validatedData['user_id']);
+    
         // Tambahkan member baru
         ChatGroupMember::create([
             'group_id' => $groupId,
             'user_id' => $validatedData['user_id'],
         ]);
-
+    
         return response()->json([
             'message' => 'Member added successfully',
+            'user' => $user, // Sertakan data user dalam respons
         ]);
     }
 
@@ -360,30 +378,34 @@ class GroupChatController extends Controller
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
-
+    
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:users,id',
         ]);
-
+    
         $group = ChatGroup::findOrFail($groupId);
-
+    
         // Cek apakah user yang menghapus member adalah pembuat grup
         if ($group->created_by !== Auth::id()) {
             return response()->json(['error' => 'You are not authorized to remove members from this group'], 403);
         }
-
+    
         // Cek apakah user yang akan dihapus adalah pembuat grup
         if ($validatedData['user_id'] === $group->created_by) {
             return response()->json(['error' => 'You cannot remove the group creator'], 400);
         }
-
+    
+        // Ambil data user yang akan dihapus
+        $user = User::findOrFail($validatedData['user_id']);
+    
         // Hapus member dari grup
         ChatGroupMember::where('group_id', $groupId)
             ->where('user_id', $validatedData['user_id'])
             ->delete();
-
+    
         return response()->json([
             'message' => 'Member removed successfully',
+            'user' => $user, // Sertakan data user dalam respons
         ]);
     }
 }
