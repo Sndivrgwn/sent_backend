@@ -81,6 +81,8 @@ Route::post('/register', [AuthAuthController::class, 'register']);
 Route::post('/login', [AuthAuthController::class, 'login']);
 Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
 Route::put('/update-image-group/{id}', [ImageController::class, 'updateGroupImg']);
+Route::put('/users/{id}/role', [UserController::class, 'updateRole']);
+
 
 Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
 Route::put('/users/{id}', [UserController::class, 'update']);
