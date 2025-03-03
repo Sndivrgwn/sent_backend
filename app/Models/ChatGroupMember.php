@@ -12,6 +12,7 @@ class ChatGroupMember extends Model
     protected $fillable = [
         'group_id',
         'user_id',
+        'role',
     ];
 
     // Relasi ke grup

@@ -57,6 +57,7 @@ class GroupChatController extends Controller
             ChatGroupMember::create([
                 'group_id' => $group->id,
                 'user_id' => Auth::id(),
+                'role' => 'admin', // Set the role to 'admin' for the creator
             ]);
 
             Log::info('Group Creator Added as Member:', ['user_id' => Auth::id()]);
@@ -226,7 +227,8 @@ class GroupChatController extends Controller
             'users.divisi',
             'users.email',
             DB::raw('CONCAT("' . asset('storage/') . '", "/", REPLACE(users.img, "storage/", "")) as img'),
-            'users.kelas'
+            'users.kelas',
+            'chat_group_members.role'
         )
         ->get();
 
@@ -341,12 +343,26 @@ class GroupChatController extends Controller
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:users,id',
         ]);
-    
         $group = ChatGroup::findOrFail($groupId);
+        $userId = Auth::id();
+        
+        $isOwner = $group->created_by === $userId;
     
-        // Cek apakah user yang menambahkan member adalah pembuat grup
-        if ($group->created_by !== Auth::id()) {
-            return response()->json(['error' => 'You are not authorized to add members to this group'], 403);
+        // Cek apakah yang mengubah role adalah owner grup
+        // Cek apakah yang mengubah role adalah admin dalam grup
+        $isAdmin = ChatGroupMember::where('group_id', $groupId)
+            ->where('user_id', $userId)
+            ->where('role', 'admin')
+            ->exists();
+    
+        $isMentor = ChatGroupMember::where('group_id', $groupId)
+            ->where('user_id', $userId)
+            ->where('role', 'mentor')
+            ->exists();
+    
+        // Hanya owner, admin, atau mentor yang bisa menambah member
+        if (!$isOwner && !$isAdmin && !$isMentor) {
+            return response()->json(['error' => 'You do not have permission to add members'], 403);
         }
     
         // Cek apakah user sudah menjadi member
@@ -374,38 +390,98 @@ class GroupChatController extends Controller
     }
 
     public function removeMember(Request $request, $groupId)
+{
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthorized'], 401);
+    }
+
+    $validatedData = $request->validate([
+        'user_id' => 'required|integer|exists:users,id',
+    ]);
+
+    $group = ChatGroup::findOrFail($groupId);
+    $userId = Auth::id();
+    
+    $isOwner = $group->created_by === $userId;
+
+    // Cek apakah yang mengubah role adalah owner grup
+    // Cek apakah yang mengubah role adalah admin dalam grup
+    $isAdmin = ChatGroupMember::where('group_id', $groupId)
+        ->where('user_id', $userId)
+        ->where('role', 'admin')
+        ->exists();
+
+    $isMentor = ChatGroupMember::where('group_id', $groupId)
+        ->where('user_id', $userId)
+        ->where('role', 'mentor')
+        ->exists();
+
+    // Hanya owner, admin, atau mentor yang bisa menghapus member
+    if (!$isOwner && !$isAdmin && !$isMentor) {
+        return response()->json(['error' => 'You do not have permission to remove members'], 403);
+    }
+
+    // Cek apakah user yang akan dihapus adalah pembuat grup
+    if ($validatedData['user_id'] === $group->created_by) {
+        return response()->json(['error' => 'You cannot remove the group creator'], 400);
+    }
+
+    // Ambil data user yang akan dihapus
+    $user = User::findOrFail($validatedData['user_id']);
+
+    // Hapus member dari grup
+    ChatGroupMember::where('group_id', $groupId)
+        ->where('user_id', $validatedData['user_id'])
+        ->delete();
+
+    return response()->json([
+        'message' => 'Member removed successfully',
+        'user' => $user, // Sertakan data user dalam respons
+    ]);
+}
+    public function updateMemberRole(Request $request, $groupId)
     {
+
         if (!Auth::check()) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
     
         $validatedData = $request->validate([
             'user_id' => 'required|integer|exists:users,id',
+            'role' => 'required|in:member,admin,mentor',
         ]);
     
         $group = ChatGroup::findOrFail($groupId);
-    
-        // Cek apakah user yang menghapus member adalah pembuat grup
-        if ($group->created_by !== Auth::id()) {
-            return response()->json(['error' => 'You are not authorized to remove members from this group'], 403);
+        $userId = Auth::id();
+        
+        $isOwner = $group->created_by === $userId;
+
+        // Cek apakah yang mengubah role adalah owner grup
+        // Cek apakah yang mengubah role adalah admin dalam grup
+        $isAdmin = ChatGroupMember::where('group_id', $groupId)
+            ->where('user_id', $userId)
+            ->where('role', 'admin')
+            ->exists();
+
+        // Hanya owner atau admin yang bisa mengubah role
+        if (!$isOwner && !$isAdmin) {
+            return response()->json(['error' => 'You are not authorized to change roles'], 403);
         }
     
-        // Cek apakah user yang akan dihapus adalah pembuat grup
-        if ($validatedData['user_id'] === $group->created_by) {
-            return response()->json(['error' => 'You cannot remove the group creator'], 400);
+        // Admin hanya bisa mengubah role menjadi 'mentor' atau 'member'
+        if ($isAdmin && !$isOwner && $validatedData['role'] === 'admin') {
+            return response()->json(['error' => 'Only the owner can assign admin roles'], 403);
         }
     
-        // Ambil data user yang akan dihapus
-        $user = User::findOrFail($validatedData['user_id']);
-    
-        // Hapus member dari grup
+        // Update role member dalam grup
         ChatGroupMember::where('group_id', $groupId)
             ->where('user_id', $validatedData['user_id'])
-            ->delete();
+            ->update(['role' => $validatedData['role']]);
     
         return response()->json([
-            'message' => 'Member removed successfully',
-            'user' => $user, // Sertakan data user dalam respons
+            'message' => 'Member role updated successfully',
         ]);
     }
+    
+
 }

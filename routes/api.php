@@ -11,6 +11,8 @@ use App\Http\Controllers\GroupChatController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\user\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Resources\UserResource;
+use App\Models\ChatGroup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Broadcast;
@@ -64,6 +66,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/groups/{groupId}', [GroupChatController::class, 'deleteGroup']);
     Route::post('/groups/{groupId}/members', [GroupChatController::class, 'addMember']);
     Route::delete('/groups/{groupId}/members', [GroupChatController::class, 'removeMember']);
+    Route::post('/group/{groupId}/update-role', [GroupChatController::class, 'updateMemberRole']);
 
     //broadcast chat
     Route::post('/chat/broadcast/create', [BroadcastController::class, 'createBroadcast']); // Menyimpan daftar penerima
@@ -102,14 +105,7 @@ Route::put('/users/{id}', [UserController::class, 'update']);
 //     return $request->user();
 // });
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    $user = $request->user();
-
-    // Modifikasi properti img agar mengembalikan URL lengkap
-    if ($user && $user->img) {
-        $user->img = asset('storage/' . $user->img);
-    }
-
-    return response()->json($user);
+    return new UserResource($request->user());
 });
 
 Route::middleware(['auth:sanctum'])->group(function () {
