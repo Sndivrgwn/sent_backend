@@ -67,12 +67,18 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/groups/{groupId}/members', [GroupChatController::class, 'addMember']);
     Route::delete('/groups/{groupId}/members', [GroupChatController::class, 'removeMember']);
     Route::post('/group/{groupId}/update-role', [GroupChatController::class, 'updateMemberRole']);
+    Route::get('/group', [GroupChatController::class, 'getAllGroup']);
 
     //broadcast chat
     Route::post('/chat/broadcast/create', [BroadcastController::class, 'createBroadcast']); // Menyimpan daftar penerima
     Route::get('/chat/broadcast/list', [BroadcastController::class, 'getCreatedBroadcasts']);
     Route::post('/chat/broadcast', [BroadcastController::class, 'sendBroadcastMessage']);
     Route::get('/chat/broadcast/{broadcast_id}', [BroadcastController::class, 'getBroadcastMessages']);
+
+    //user
+    Route::put('/users/{id}', [UserController::class, 'update']);
+    Route::put('/users/{id}/role', [UserController::class, 'updateRole']);
+    Route::delete('/users/{id}', [UserController::class, 'destroy']);
 });
 
 
@@ -81,11 +87,9 @@ Route::post('/register', [AuthAuthController::class, 'register']);
 Route::post('/login', [AuthAuthController::class, 'login']);
 Route::middleware('auth:sanctum')->post('/logout', [AuthAuthController::class, 'logout']);
 Route::put('/update-image-group/{id}', [ImageController::class, 'updateGroupImg']);
-Route::put('/users/{id}/role', [UserController::class, 'updateRole']);
 
 
 Route::get('/users/{id}', [AuthAuthController::class, 'getUserById']);
-Route::put('/users/{id}', [UserController::class, 'update']);
 
 
 /**

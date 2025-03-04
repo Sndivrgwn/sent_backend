@@ -334,6 +334,16 @@ class GroupChatController extends Controller
         ]);
     }
 
+    public function getAllGroup(Request $request)
+    {
+        $groups = ChatGroup::with('members')->get(); 
+
+        return response()->json([
+            'groups' => $groups
+        ]);
+    }
+
+
     public function addMember(Request $request, $groupId)
     {
         if (!Auth::check()) {
