@@ -6124,3 +6124,43 @@ Did you mean one of these?
 [2025-03-03 07:26:50] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"2"} 
 [2025-03-03 07:26:51] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"2"} 
 [2025-03-03 07:26:51] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"2"} 
+[2025-03-04 03:55:31] production.ERROR: Pusher\Pusher::__construct(): Argument #1 ($auth_key) must be of type string, null given, called in C:\xampp\htdocs\sent_backend-2\vendor\laravel\framework\src\Illuminate\Broadcasting\BroadcastManager.php on line 313 {"exception":"[object] (TypeError(code: 0): Pusher\\Pusher::__construct(): Argument #1 ($auth_key) must be of type string, null given, called in C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php on line 313 at C:\\xampp\\htdocs\\sent_backend-2\\vendor\\pusher\\pusher-php-server\\src\\Pusher.php:63)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(313): Pusher\\Pusher->__construct(NULL, NULL, NULL, Array, NULL)
+#1 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(295): Illuminate\\Broadcasting\\BroadcastManager->pusher(Array)
+#2 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(262): Illuminate\\Broadcasting\\BroadcastManager->createPusherDriver(Array)
+#3 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(233): Illuminate\\Broadcasting\\BroadcastManager->resolve('pusher')
+#4 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(222): Illuminate\\Broadcasting\\BroadcastManager->get('pusher')
+#5 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Broadcasting\\BroadcastManager.php(490): Illuminate\\Broadcasting\\BroadcastManager->driver()
+#6 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Broadcasting\\BroadcastManager->__call('channel', Array)
+#7 C:\\xampp\\htdocs\\sent_backend-2\\app\\Providers\\BroadcastServiceProvider.php(29): Illuminate\\Support\\Facades\\Facade::__callStatic('channel', Array)
+#8 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\BroadcastServiceProvider->boot()
+#9 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1059): Illuminate\\Container\\Container->call(Array)
+#14 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1040): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\BroadcastServiceProvider))
+#15 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\BroadcastServiceProvider), 24)
+#16 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1041): array_walk(Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#18 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(286): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#19 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(447): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#20 C:\\xampp\\htdocs\\sent_backend-2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(199): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#21 C:\\xampp\\htdocs\\sent_backend-2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 {main}
+"} 
+[2025-03-04 04:02:10] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-04 04:02:11] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-04 04:02:14] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-04 04:02:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-04 04:02:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-04 04:02:15] local.INFO: Pesan yang akan ditandai sebagai read:  
+[2025-03-04 04:03:20] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:20] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:22] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:22] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:32] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:32] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:33] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 
+[2025-03-04 04:03:33] local.INFO: Authenticating user for channel: {"user_id":1,"group_id":"1"} 

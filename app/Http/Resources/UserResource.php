@@ -25,6 +25,7 @@ class UserResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
+            'role' => $this->role,
             'img' => $this->img ? asset('storage/' . $this->img) : null,
             'groups' => $groups, // Menyertakan daftar grup dan role dalam respons
         ];
