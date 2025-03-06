@@ -12,11 +12,6 @@ class UserController extends Controller
 {
     public function update(Request $request, $id)
     {
-        // Hanya admin yang bisa mengedit user
-        if (Auth::user()->role !== 'admin') {
-            abort(403, 'Unauthorized action.');
-        }
-
         $request->validate([
             'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'nullable|string|max:255',
@@ -53,6 +48,7 @@ class UserController extends Controller
                     'email' => $user->email,
                     'kelas' => $user->kelas,
                     'divisi' => $user->divisi,
+                    'role' => $user->role,
                     'img' => asset('storage/' . $user->img), // Return full image URL
                 ],
             ], 200);
@@ -64,6 +60,8 @@ class UserController extends Controller
             ], 500);
         }
     }
+
+
 
     public function updateRole(Request $request, $id)
     {

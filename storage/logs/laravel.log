@@ -6346,3 +6346,41 @@ Did you mean one of these?
 [2025-03-04 09:55:12] local.ERROR: Error updating user role: {"user_id":"2","error":"SQLSTATE[01000]: Warning: 1265 Data truncated for column 'role' at row 1 (Connection: mysql, SQL: update `users` set `role` = mentor, `users`.`updated_at` = 2025-03-04 09:55:12 where `id` = 2)"} 
 [2025-03-04 09:57:07] local.ERROR: Error updating user role: ["SQLSTATE[01000]: Warning: 1265 Data truncated for column 'role' at row 1 (Connection: mysql, SQL: update `users` set `role` = mentor, `users`.`updated_at` = 2025-03-04 09:57:07 where `id` = 2)"] 
 [2025-03-04 10:02:18] local.ERROR: Error updating user role: ["No query results for model [App\\Models\\User] 2"] 
+[2025-03-04 10:08:36] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:08:37] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:08:42] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:08:45] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:11:10] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:11:11] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:11:26] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:11:28] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:11:41] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:11:42] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:15:22] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:15:23] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:15:38] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:15:49] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:17:14] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:17:17] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:17:21] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:17:37] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:22:19] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:22:20] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:22:29] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-04 10:22:34] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-05 23:41:44] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-05 23:41:45] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-05 23:41:49] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-05 23:41:51] local.INFO: Authenticating user for channel: {"user_id":3,"group_id":"3"} 
+[2025-03-05 23:50:12] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"3"} 
+[2025-03-05 23:50:12] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"3"} 
+[2025-03-05 23:50:13] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"3"} 
+[2025-03-05 23:50:15] local.INFO: Authenticating user for channel: {"user_id":4,"group_id":"3"} 
+[2025-03-05 23:52:43] local.INFO: Image received: [{"Illuminate\\Http\\UploadedFile":"C:\\xampp\\tmp\\php302F.tmp"}] 
+[2025-03-05 23:52:45] local.INFO: New image stored at: ["user_images/4/JUCMHklSzEMuMv3ZePodCtdAfHnZ3CQH040C4O8O.jpg"] 
+[2025-03-05 23:54:54] local.INFO: Image received: [{"Illuminate\\Http\\UploadedFile":"C:\\xampp\\tmp\\php2EBF.tmp"}] 
+[2025-03-05 23:54:54] local.INFO: Deleting old image: ["user_images/4/JUCMHklSzEMuMv3ZePodCtdAfHnZ3CQH040C4O8O.jpg"] 
+[2025-03-05 23:54:54] local.INFO: New image stored at: ["user_images/4/wOSQ55HAXcuhF72zdzKlUcJrPskfTHiEZRaxFJf3.png"] 
+[2025-03-06 00:30:36] local.INFO: Image received: [{"Illuminate\\Http\\UploadedFile":"C:\\xampp\\tmp\\phpE39D.tmp"}] 
+[2025-03-06 00:30:36] local.INFO: Deleting old image: ["user_images/4/wOSQ55HAXcuhF72zdzKlUcJrPskfTHiEZRaxFJf3.png"] 
+[2025-03-06 00:30:36] local.INFO: New image stored at: ["user_images/4/uCNJs3cQxlzpwFUvVs8hRhlvbNZd3B8sKn6GXZWy.jpg"] 
